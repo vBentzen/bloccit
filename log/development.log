@@ -1,0 +1,1497 @@
+
+
+Started GET "/posts" for ::1 at 2017-10-29 09:40:46 +0100
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.5) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.6) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.6) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.6) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.6) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.6) lib/rack/lock.rb:17:in `call'
+  rack (1.6.6) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.6) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.2ms)
+
+
+Started GET "/posts" for ::1 at 2017-10-29 09:40:47 +0100
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.5) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.6) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.6) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.6) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.6) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.6) lib/rack/lock.rb:17:in `call'
+  rack (1.6.6) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.6) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.0ms)
+
+
+Started GET "/posts" for ::1 at 2017-10-29 09:40:48 +0100
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.5) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.6) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.6) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.6) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.6) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.6) lib/rack/lock.rb:17:in `call'
+  rack (1.6.6) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.6) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.4ms)
+
+
+Started GET "/posts" for ::1 at 2017-10-29 09:40:48 +0100
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.5) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.6) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.6) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.6) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.6) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.6) lib/rack/lock.rb:17:in `call'
+  rack (1.6.6) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.6) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.1ms)
+
+
+Started GET "/posts" for ::1 at 2017-10-29 09:40:48 +0100
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.5) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.6) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.6) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.6) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.6) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.6) lib/rack/lock.rb:17:in `call'
+  rack (1.6.6) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.6) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.5ms)
+
+
+Started GET "/posts" for ::1 at 2017-10-29 09:40:48 +0100
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.5) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.6) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.6) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.6) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.6) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.6) lib/rack/lock.rb:17:in `call'
+  rack (1.6.6) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.6) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.5ms)
+
+
+Started GET "/posts" for ::1 at 2017-10-29 09:40:49 +0100
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.5) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.6) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.6) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.6) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.6) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.6) lib/rack/lock.rb:17:in `call'
+  rack (1.6.6) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.6) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.7ms)
+
+
+Started GET "/posts" for ::1 at 2017-10-29 09:40:49 +0100
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.5) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.6) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.6) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.6) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.6) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.6) lib/rack/lock.rb:17:in `call'
+  rack (1.6.6) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.6) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.6ms)
+
+
+Started GET "/posts" for ::1 at 2017-10-29 09:40:49 +0100
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.5) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.6) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.6) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.6) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.6) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.6) lib/rack/lock.rb:17:in `call'
+  rack (1.6.6) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.6) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/bentzen/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.8ms)
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreatePosts (20170517065028)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170517065028"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to CreateComments (20170517080758)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_comments_on_post_id" ON "comments" ("post_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170517080758"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+[0m
+
+
+Started GET "/posts" for ::1 at 2017-10-29 09:41:05 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 3390ms (Views: 3378.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-10-29 09:41:09 +0100
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 28ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-22099b67f9997fdd7db18ec2344f30a2bea154b48c63601f6d0a244aee19fdc3.css?body=1" for ::1 at 2017-10-29 09:41:09 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-10-29 09:41:09 +0100
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2017-10-29 09:41:09 +0100
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-10-29 09:41:09 +0100
+
+
+Started GET "/" for ::1 at 2017-10-29 09:41:11 +0100
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2017-10-29 09:41:11 +0100
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2017-10-29 09:41:17 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Darth Caedus"], ["body", "Cupiditate dolorem consectetur non alias enim vel. Consequuntur dignissimos deserunt aspernatur facilis eos velit sunt. Nihil odio aliquid enim modi dolor. Qui voluptas sit qui aliquam nihil sint."], ["created_at", "2017-10-29 08:41:29.426282"], ["updated_at", "2017-10-29 08:41:29.426282"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Han Solo"], ["body", "Consequuntur ut voluptatem numquam commodi temporibus voluptatibus. Itaque ut nobis possimus maxime error ex aut. Ducimus aut ut voluptas officiis vel culpa consectetur."], ["created_at", "2017-10-29 08:41:29.431858"], ["updated_at", "2017-10-29 08:41:29.431858"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Bail Organa"], ["body", "Odio dignissimos accusamus a facere velit. Dolor fugiat quae. Cupiditate dolores perspiciatis deserunt."], ["created_at", "2017-10-29 08:41:29.435034"], ["updated_at", "2017-10-29 08:41:29.435034"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Darth Vader"], ["body", "Dignissimos aliquam voluptatem et. Tenetur et aut autem voluptas. Consectetur nihil quidem accusantium tenetur ut veniam. Dolore ut veritatis nobis error. Cupiditate culpa qui ut."], ["created_at", "2017-10-29 08:41:29.437633"], ["updated_at", "2017-10-29 08:41:29.437633"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Qui-Gon Jinn"], ["body", "Sunt iure tempora minus eos aliquam. Et asperiores dolor omnis ut. Est dolorem ut dicta et."], ["created_at", "2017-10-29 08:41:29.439827"], ["updated_at", "2017-10-29 08:41:29.439827"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Darth Vader"], ["body", "Voluptates voluptas voluptatibus totam. Reprehenderit rerum expedita adipisci assumenda sequi rerum. Nulla enim cupiditate ipsum qui. Nesciunt labore modi quia expedita dolorem maiores. Adipisci minima omnis qui."], ["created_at", "2017-10-29 08:41:29.442146"], ["updated_at", "2017-10-29 08:41:29.442146"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Chewbacca"], ["body", "Nemo quisquam amet vero autem aliquam. Voluptatem molestias voluptate incidunt necessitatibus minima quo. Autem quia est quo harum delectus at tempore. Dolorem ipsa ut at totam sit molestiae."], ["created_at", "2017-10-29 08:41:29.444776"], ["updated_at", "2017-10-29 08:41:29.444776"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Count Dooku"], ["body", "Ipsum aperiam iure atque libero. Nisi eius rerum. Asperiores accusamus amet autem et nobis ipsum."], ["created_at", "2017-10-29 08:41:29.446765"], ["updated_at", "2017-10-29 08:41:29.446765"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Lando Calrissian"], ["body", "Non et repellendus autem laborum repellat. Sint ipsam ut. Suscipit dolorem fugiat. Tenetur quis consectetur laborum voluptatibus aut."], ["created_at", "2017-10-29 08:41:29.449354"], ["updated_at", "2017-10-29 08:41:29.449354"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Padme Amidala"], ["body", "Cum id omnis eos veritatis et eligendi laudantium. Tempora aut consectetur. Iste ut laborum ut quis. Nemo velit quidem modi qui similique. Placeat enim dolor amet."], ["created_at", "2017-10-29 08:41:29.451800"], ["updated_at", "2017-10-29 08:41:29.451800"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Wedge Antilles"], ["body", "Sit suscipit vero reiciendis voluptate autem architecto est. Quo dolor quia qui aut consequuntur temporibus eos. Ut atque est ratione."], ["created_at", "2017-10-29 08:41:29.454435"], ["updated_at", "2017-10-29 08:41:29.454435"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Sheev Palpatine"], ["body", "Ducimus similique accusamus. Consequatur cum velit voluptatem ut eum. Dolor est minus quasi corrupti assumenda quas ut. Aut nulla itaque."], ["created_at", "2017-10-29 08:41:29.457316"], ["updated_at", "2017-10-29 08:41:29.457316"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Anakin Skywalker"], ["body", "Quis sed voluptatum suscipit magnam. Possimus et autem doloremque magni voluptates deleniti. Adipisci aut consequatur quidem fugiat quis. Delectus repellat aut velit laborum vel quo. Aut facilis dolorem et voluptatem exercitationem eos dolores."], ["created_at", "2017-10-29 08:41:29.460066"], ["updated_at", "2017-10-29 08:41:29.460066"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Nute Gunray"], ["body", "Laborum enim illo distinctio aspernatur. Explicabo dolore molestias. Aut consequatur nulla autem ut itaque voluptatem ipsa. Veniam delectus veritatis. Exercitationem aliquid dolor dolor dolores distinctio ipsum perspiciatis."], ["created_at", "2017-10-29 08:41:29.462576"], ["updated_at", "2017-10-29 08:41:29.462576"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Padme Amidala"], ["body", "Accusamus perspiciatis delectus possimus earum fugiat saepe iste. Mollitia deleniti eum consequatur delectus impedit. Ea dolore iure."], ["created_at", "2017-10-29 08:41:29.464908"], ["updated_at", "2017-10-29 08:41:29.464908"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Borvo the Hutt"], ["body", "Omnis fuga reiciendis voluptatum accusantium nihil delectus sit. Animi dolor unde autem excepturi ullam. Commodi exercitationem ut eaque porro unde quisquam deserunt. Ut enim hic sit exercitationem animi temporibus."], ["created_at", "2017-10-29 08:41:29.467458"], ["updated_at", "2017-10-29 08:41:29.467458"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Panaka"], ["body", "Vel voluptas quaerat velit sint nostrum dolorum corrupti. Nam placeat sunt delectus esse nihil soluta aspernatur. Minima sunt reprehenderit facilis omnis quibusdam ab. Soluta minus quo molestiae corrupti."], ["created_at", "2017-10-29 08:41:29.470050"], ["updated_at", "2017-10-29 08:41:29.470050"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Boba Fett"], ["body", "Consequuntur excepturi eligendi eveniet rerum error. Consectetur aut sed sunt minus consequatur officia ut. Consequatur et dicta aut nemo alias enim. Possimus dolorem error perspiciatis earum architecto iusto."], ["created_at", "2017-10-29 08:41:29.473057"], ["updated_at", "2017-10-29 08:41:29.473057"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Padme Amidala"], ["body", "Autem quis quam est iusto voluptatem. Ut neque repellat ipsam. Doloribus non id."], ["created_at", "2017-10-29 08:41:29.475413"], ["updated_at", "2017-10-29 08:41:29.475413"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Lando Calrissian"], ["body", "Veritatis praesentium tempora. Maxime et qui corporis eius nesciunt. Nemo perspiciatis nisi qui voluptatem ab. Quam itaque accusamus."], ["created_at", "2017-10-29 08:41:29.477848"], ["updated_at", "2017-10-29 08:41:29.477848"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Yoda"], ["body", "Voluptas totam illo. Recusandae eum et accusantium impedit. Consequuntur quia sed voluptatum harum maxime in ducimus."], ["created_at", "2017-10-29 08:41:29.480515"], ["updated_at", "2017-10-29 08:41:29.480515"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Borvo the Hutt"], ["body", "Enim id deserunt maiores eligendi voluptate praesentium amet. Veritatis ab rem dolores et sed doloribus. In nemo repellat quam."], ["created_at", "2017-10-29 08:41:29.482732"], ["updated_at", "2017-10-29 08:41:29.482732"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Leia Organa"], ["body", "Eaque distinctio magni placeat. At ratione est illum perferendis sed qui. Culpa earum omnis."], ["created_at", "2017-10-29 08:41:29.486552"], ["updated_at", "2017-10-29 08:41:29.486552"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Jabba the Hutt"], ["body", "Expedita ipsam totam dolorem sit ut fuga qui. Error voluptas optio aut. Sit et delectus eos rerum et. Dolor corrupti consequuntur voluptas aut ullam."], ["created_at", "2017-10-29 08:41:29.491111"], ["updated_at", "2017-10-29 08:41:29.491111"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Wedge Antilles"], ["body", "Est itaque et expedita incidunt. Pariatur neque quae ullam in aut autem. Voluptatem veritatis quis praesentium repellendus et possimus. Delectus voluptas omnis sequi."], ["created_at", "2017-10-29 08:41:29.495333"], ["updated_at", "2017-10-29 08:41:29.495333"]]
+  [1m[35m (2.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Darth Vader"], ["body", "Id architecto ut repellat mollitia. Dolores iure dicta sequi consequatur asperiores officia. Rem voluptatem optio similique sint. Ut ipsum numquam aperiam tenetur. Assumenda ratione quo fugiat."], ["created_at", "2017-10-29 08:41:29.500226"], ["updated_at", "2017-10-29 08:41:29.500226"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Jar Jar Binks"], ["body", "Aliquam sit vero hic quos pariatur corrupti eligendi. Vel et nemo soluta aut sed delectus. Exercitationem dolores sint iusto dignissimos velit corporis qui."], ["created_at", "2017-10-29 08:41:29.503491"], ["updated_at", "2017-10-29 08:41:29.503491"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Lando Calrissian"], ["body", "Non officiis ipsa nulla consequatur dicta maiores. Nesciunt corrupti sunt. Minima tenetur iste modi dolores voluptatem ipsa. Voluptas dicta et aut est et consectetur."], ["created_at", "2017-10-29 08:41:29.508133"], ["updated_at", "2017-10-29 08:41:29.508133"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Nute Gunray"], ["body", "Molestiae commodi quasi non cum animi. Veritatis nostrum dolorem adipisci occaecati voluptatem quia. Facere soluta nemo voluptate tenetur est error. Et tempora voluptate necessitatibus veniam eveniet aut consequatur. Rerum magni cupiditate quidem."], ["created_at", "2017-10-29 08:41:29.510755"], ["updated_at", "2017-10-29 08:41:29.510755"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Sheev Palpatine"], ["body", "Voluptas maxime rem et est iste distinctio. Mollitia veritatis ipsam soluta a saepe labore. Ut et nihil dolor. Quaerat ut porro. Sunt ipsam harum impedit vitae enim quo quia."], ["created_at", "2017-10-29 08:41:29.514039"], ["updated_at", "2017-10-29 08:41:29.514039"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Bail Organa"], ["body", "Suscipit est magni cum ut similique sit libero. Perspiciatis doloremque qui et illo non. Dolore quam vero minus. Minima quibusdam voluptatem nihil architecto voluptatem. Nihil ullam eligendi."], ["created_at", "2017-10-29 08:41:29.516316"], ["updated_at", "2017-10-29 08:41:29.516316"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Darth Maul"], ["body", "Amet molestias autem. Et est consectetur et. Ea et veritatis omnis aut. Omnis exercitationem aut."], ["created_at", "2017-10-29 08:41:29.518671"], ["updated_at", "2017-10-29 08:41:29.518671"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Panaka"], ["body", "Non dolorem est soluta ea cum assumenda. Culpa quidem suscipit aut quis sunt est iure. Aliquid ea voluptas quo suscipit alias perferendis. Velit est distinctio ex assumenda ipsa cum quam. Qui impedit atque veniam tempora praesentium consequuntur."], ["created_at", "2017-10-29 08:41:29.521349"], ["updated_at", "2017-10-29 08:41:29.521349"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Darth Caedus"], ["body", "Harum nesciunt at quo et doloribus vel corporis. Voluptas ut ut modi. Facere et nihil aut. Consequuntur quia qui."], ["created_at", "2017-10-29 08:41:29.523281"], ["updated_at", "2017-10-29 08:41:29.523281"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Panaka"], ["body", "Libero sed quibusdam. Qui itaque nulla facere ex. Dolores inventore reprehenderit quidem perspiciatis repudiandae omnis."], ["created_at", "2017-10-29 08:41:29.525783"], ["updated_at", "2017-10-29 08:41:29.525783"]]
+  [1m[35m (9.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Wedge Antilles"], ["body", "Ad optio voluptas unde consequatur omnis itaque quia. Aspernatur officiis voluptas earum. Harum et omnis qui esse sunt."], ["created_at", "2017-10-29 08:41:29.536522"], ["updated_at", "2017-10-29 08:41:29.536522"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Bail Organa"], ["body", "Illum cumque est rerum aut porro enim veritatis. Labore non dolorem ullam dolorum nisi in. Corporis voluptas corrupti eius dolorem. Nisi saepe quod."], ["created_at", "2017-10-29 08:41:29.538843"], ["updated_at", "2017-10-29 08:41:29.538843"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Count Dooku"], ["body", "Incidunt pariatur sed. Neque est autem. Autem est atque qui perspiciatis. Est ullam velit sint voluptates repudiandae eos. In a itaque voluptatem aut deleniti est voluptatem."], ["created_at", "2017-10-29 08:41:29.541577"], ["updated_at", "2017-10-29 08:41:29.541577"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Mace Windu"], ["body", "Cum ut asperiores pariatur. Ut magnam quis delectus voluptas voluptatem sequi corrupti. Ducimus ab et ipsa consectetur ad. Quisquam animi minima occaecati ut ipsam aut."], ["created_at", "2017-10-29 08:41:29.543487"], ["updated_at", "2017-10-29 08:41:29.543487"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Han Solo"], ["body", "Earum et magnam natus quis nihil praesentium consequatur. Blanditiis ut nulla consectetur placeat veniam excepturi quis. Eum unde ex id odit veritatis."], ["created_at", "2017-10-29 08:41:29.546251"], ["updated_at", "2017-10-29 08:41:29.546251"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Sheev Palpatine"], ["body", "Nihil eum harum provident sint. Et labore voluptatem quod eos. Et explicabo totam ea est et corporis cum."], ["created_at", "2017-10-29 08:41:29.549149"], ["updated_at", "2017-10-29 08:41:29.549149"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Sebulba"], ["body", "Occaecati praesentium deserunt tempore id nulla sit. Tenetur eum reprehenderit est quod. Libero est quia rerum. Non vitae excepturi necessitatibus enim dolorem iure repudiandae."], ["created_at", "2017-10-29 08:41:29.551761"], ["updated_at", "2017-10-29 08:41:29.551761"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Borvo the Hutt"], ["body", "Totam quos animi non dolorem ut consectetur quia. Quos eum esse. Cum unde modi. Voluptate molestias ab inventore vitae. Ex rerum excepturi incidunt rerum corporis cum aut."], ["created_at", "2017-10-29 08:41:29.554636"], ["updated_at", "2017-10-29 08:41:29.554636"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Leia Organa"], ["body", "Vitae nostrum dolor ipsam dignissimos reiciendis est ipsum. Veritatis cupiditate odit debitis dolorem et facere qui. Nihil reiciendis modi nulla officiis non. Harum sed corrupti necessitatibus recusandae consequatur ratione. Corrupti non inventore qui."], ["created_at", "2017-10-29 08:41:29.556989"], ["updated_at", "2017-10-29 08:41:29.556989"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Lando Calrissian"], ["body", "Ut eius alias facere nostrum minima. Corrupti facere velit possimus exercitationem quas sit. Odit commodi at natus quo reiciendis rerum. Ab deserunt qui voluptas quia. Ut et ut quia."], ["created_at", "2017-10-29 08:41:29.559204"], ["updated_at", "2017-10-29 08:41:29.559204"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Boba Fett"], ["body", "Architecto illum modi nostrum aut. Fugit ullam voluptatem eius animi asperiores. Consequatur ut quas ut quia aut. Voluptas ullam cupiditate ipsum facilis. Quia tempore neque officiis quam assumenda."], ["created_at", "2017-10-29 08:41:29.562423"], ["updated_at", "2017-10-29 08:41:29.562423"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Count Dooku"], ["body", "Ullam ea autem eligendi qui praesentium pariatur. Voluptas recusandae quod non repudiandae. Quis fugiat laborum illo sed sed sit vero. Omnis non voluptate omnis eligendi sunt. Fuga aut eos."], ["created_at", "2017-10-29 08:41:29.565489"], ["updated_at", "2017-10-29 08:41:29.565489"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Sebulba"], ["body", "Eum soluta molestiae ut velit quas eos. Non aut dolor. Tempora ut voluptatibus."], ["created_at", "2017-10-29 08:41:29.568458"], ["updated_at", "2017-10-29 08:41:29.568458"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Padme Amidala"], ["body", "Adipisci non qui. Ea sit qui quo sit ea excepturi odit. Sit recusandae rerum. Sint laboriosam voluptatem ut cumque ea. Magni fugit ea est quae deleniti est."], ["created_at", "2017-10-29 08:41:29.570819"], ["updated_at", "2017-10-29 08:41:29.570819"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Nute Gunray"], ["body", "Sit voluptas dignissimos amet dolorem vel commodi. Ipsum sed praesentium impedit. Earum voluptas iure veniam enim. Necessitatibus vitae nemo modi molestias ab nulla doloremque."], ["created_at", "2017-10-29 08:41:29.573611"], ["updated_at", "2017-10-29 08:41:29.573611"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 47], ["body", "Do. Or do not. There is no try."], ["created_at", "2017-10-29 08:41:29.584449"], ["updated_at", "2017-10-29 08:41:29.584449"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 13], ["body", "Wars not make one great."], ["created_at", "2017-10-29 08:41:29.587165"], ["updated_at", "2017-10-29 08:41:29.587165"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 35], ["body", "Only at the end do you realize the power of the Dark Side."], ["created_at", "2017-10-29 08:41:29.590280"], ["updated_at", "2017-10-29 08:41:29.590280"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 14], ["body", "I have a bad feeling about this."], ["created_at", "2017-10-29 08:41:29.592687"], ["updated_at", "2017-10-29 08:41:29.592687"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 45], ["body", "If you're saying that coming here was a bad idea, I'm starting to agree with you."], ["created_at", "2017-10-29 08:41:29.595765"], ["updated_at", "2017-10-29 08:41:29.595765"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 32], ["body", "Truly wonderful, the mind of a child is."], ["created_at", "2017-10-29 08:41:29.598170"], ["updated_at", "2017-10-29 08:41:29.598170"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 37], ["body", "Bounty hunters! We don't need this scum."], ["created_at", "2017-10-29 08:41:29.600728"], ["updated_at", "2017-10-29 08:41:29.600728"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 24], ["body", "Fear is the path to the dark side... fear leads to anger... anger leads to hate... hate leads to suffering."], ["created_at", "2017-10-29 08:41:29.603349"], ["updated_at", "2017-10-29 08:41:29.603349"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 48], ["body", "Shut him up or shut him down."], ["created_at", "2017-10-29 08:41:29.605211"], ["updated_at", "2017-10-29 08:41:29.605211"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 5], ["body", "If they follow standard Imperial procedure, they'll dump their garbage before they go to light-speed."], ["created_at", "2017-10-29 08:41:29.607044"], ["updated_at", "2017-10-29 08:41:29.607044"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 27], ["body", "Only at the end do you realize the power of the Dark Side."], ["created_at", "2017-10-29 08:41:29.609087"], ["updated_at", "2017-10-29 08:41:29.609087"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 2], ["body", "Who's the more foolish; the fool, or the fool who follows him?"], ["created_at", "2017-10-29 08:41:29.611166"], ["updated_at", "2017-10-29 08:41:29.611166"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 24], ["body", "You do have your moments. Not many, but you have them."], ["created_at", "2017-10-29 08:41:29.613914"], ["updated_at", "2017-10-29 08:41:29.613914"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 9], ["body", "If they follow standard Imperial procedure, they'll dump their garbage before they go to light-speed."], ["created_at", "2017-10-29 08:41:29.616694"], ["updated_at", "2017-10-29 08:41:29.616694"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 3], ["body", "Bounty hunters! We don't need this scum."], ["created_at", "2017-10-29 08:41:29.620142"], ["updated_at", "2017-10-29 08:41:29.620142"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 28], ["body", "Wars not make one great."], ["created_at", "2017-10-29 08:41:29.622878"], ["updated_at", "2017-10-29 08:41:29.622878"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 49], ["body", "Only at the end do you realize the power of the Dark Side."], ["created_at", "2017-10-29 08:41:29.625139"], ["updated_at", "2017-10-29 08:41:29.625139"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 18], ["body", "No reward is worth this."], ["created_at", "2017-10-29 08:41:29.628216"], ["updated_at", "2017-10-29 08:41:29.628216"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 23], ["body", "I find your lack of faith disturbing."], ["created_at", "2017-10-29 08:41:29.631599"], ["updated_at", "2017-10-29 08:41:29.631599"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 19], ["body", "No reward is worth this."], ["created_at", "2017-10-29 08:41:29.634403"], ["updated_at", "2017-10-29 08:41:29.634403"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 27], ["body", "If you're saying that coming here was a bad idea, I'm starting to agree with you."], ["created_at", "2017-10-29 08:41:29.636752"], ["updated_at", "2017-10-29 08:41:29.636752"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 27], ["body", "Fear is the path to the dark side... fear leads to anger... anger leads to hate... hate leads to suffering."], ["created_at", "2017-10-29 08:41:29.640396"], ["updated_at", "2017-10-29 08:41:29.640396"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 33], ["body", "Adventure. Excitement. A Jedi craves not these things."], ["created_at", "2017-10-29 08:41:29.644055"], ["updated_at", "2017-10-29 08:41:29.644055"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 11], ["body", "Would somebody get this big walking carpet out of my way?"], ["created_at", "2017-10-29 08:41:29.646986"], ["updated_at", "2017-10-29 08:41:29.646986"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 18], ["body", "Shut him up or shut him down."], ["created_at", "2017-10-29 08:41:29.648902"], ["updated_at", "2017-10-29 08:41:29.648902"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 12], ["body", "Adventure. Excitement. A Jedi craves not these things."], ["created_at", "2017-10-29 08:41:29.650503"], ["updated_at", "2017-10-29 08:41:29.650503"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 14], ["body", "You know, that little droid is going to cause me a lot of trouble."], ["created_at", "2017-10-29 08:41:29.653744"], ["updated_at", "2017-10-29 08:41:29.653744"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 11], ["body", "You know, that little droid is going to cause me a lot of trouble."], ["created_at", "2017-10-29 08:41:29.656990"], ["updated_at", "2017-10-29 08:41:29.656990"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 20], ["body", "I have a bad feeling about this."], ["created_at", "2017-10-29 08:41:29.658771"], ["updated_at", "2017-10-29 08:41:29.658771"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 37], ["body", "If they follow standard Imperial procedure, they'll dump their garbage before they go to light-speed."], ["created_at", "2017-10-29 08:41:29.662011"], ["updated_at", "2017-10-29 08:41:29.662011"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 32], ["body", "Aren't you a little short for a Stormtrooper?"], ["created_at", "2017-10-29 08:41:29.665481"], ["updated_at", "2017-10-29 08:41:29.665481"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 13], ["body", "I have a bad feeling about this."], ["created_at", "2017-10-29 08:41:29.668500"], ["updated_at", "2017-10-29 08:41:29.668500"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 11], ["body", "Who's the more foolish; the fool, or the fool who follows him?"], ["created_at", "2017-10-29 08:41:29.672038"], ["updated_at", "2017-10-29 08:41:29.672038"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 21], ["body", "Now, witness the power of this fully operational battle station."], ["created_at", "2017-10-29 08:41:29.675929"], ["updated_at", "2017-10-29 08:41:29.675929"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 22], ["body", "That is why you fail."], ["created_at", "2017-10-29 08:41:29.677999"], ["updated_at", "2017-10-29 08:41:29.677999"]]
+  [1m[36m (15.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 7], ["body", "A Jedi uses the Force for knowledge and defense, never for attack."], ["created_at", "2017-10-29 08:41:29.695673"], ["updated_at", "2017-10-29 08:41:29.695673"]]
+  [1m[35m (16.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 43], ["body", "You do have your moments. Not many, but you have them."], ["created_at", "2017-10-29 08:41:29.714120"], ["updated_at", "2017-10-29 08:41:29.714120"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 16], ["body", "Strike me down, and I will become more powerful than you could possibly imagine."], ["created_at", "2017-10-29 08:41:29.717080"], ["updated_at", "2017-10-29 08:41:29.717080"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 23], ["body", "You will never find a more wretched hive of scum and villainy. We must be cautious."], ["created_at", "2017-10-29 08:41:29.720814"], ["updated_at", "2017-10-29 08:41:29.720814"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 39], ["body", "You are unwise to lower your defenses!"], ["created_at", "2017-10-29 08:41:29.724238"], ["updated_at", "2017-10-29 08:41:29.724238"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 5], ["body", "If you're saying that coming here was a bad idea, I'm starting to agree with you."], ["created_at", "2017-10-29 08:41:29.727958"], ["updated_at", "2017-10-29 08:41:29.727958"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 27], ["body", "Do. Or do not. There is no try."], ["created_at", "2017-10-29 08:41:29.732129"], ["updated_at", "2017-10-29 08:41:29.732129"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 3], ["body", "Adventure. Excitement. A Jedi craves not these things."], ["created_at", "2017-10-29 08:41:29.735809"], ["updated_at", "2017-10-29 08:41:29.735809"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 23], ["body", "Adventure. Excitement. A Jedi craves not these things."], ["created_at", "2017-10-29 08:41:29.739503"], ["updated_at", "2017-10-29 08:41:29.739503"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 5], ["body", "Fear is the path to the dark side... fear leads to anger... anger leads to hate... hate leads to suffering."], ["created_at", "2017-10-29 08:41:29.743372"], ["updated_at", "2017-10-29 08:41:29.743372"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 18], ["body", "Fear is the path to the dark side... fear leads to anger... anger leads to hate... hate leads to suffering."], ["created_at", "2017-10-29 08:41:29.746802"], ["updated_at", "2017-10-29 08:41:29.746802"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 10], ["body", "That is why you fail."], ["created_at", "2017-10-29 08:41:29.750497"], ["updated_at", "2017-10-29 08:41:29.750497"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 42], ["body", "If you're saying that coming here was a bad idea, I'm starting to agree with you."], ["created_at", "2017-10-29 08:41:29.754144"], ["updated_at", "2017-10-29 08:41:29.754144"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 40], ["body", "Well, you said you wanted to be around when I made a mistake."], ["created_at", "2017-10-29 08:41:29.757763"], ["updated_at", "2017-10-29 08:41:29.757763"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 35], ["body", "Now, witness the power of this fully operational battle station."], ["created_at", "2017-10-29 08:41:29.761017"], ["updated_at", "2017-10-29 08:41:29.761017"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 8], ["body", "Who's the more foolish; the fool, or the fool who follows him?"], ["created_at", "2017-10-29 08:41:29.764292"], ["updated_at", "2017-10-29 08:41:29.764292"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 16], ["body", "R2-D2, you know better than to trust a strange computer!"], ["created_at", "2017-10-29 08:41:29.767231"], ["updated_at", "2017-10-29 08:41:29.767231"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 21], ["body", "No reward is worth this."], ["created_at", "2017-10-29 08:41:29.770511"], ["updated_at", "2017-10-29 08:41:29.770511"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 32], ["body", "You know, that little droid is going to cause me a lot of trouble."], ["created_at", "2017-10-29 08:41:29.774208"], ["updated_at", "2017-10-29 08:41:29.774208"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 14], ["body", "It's not impossible. I used to bullseye womp rats in my T-16 back home, they're not much bigger than two meters."], ["created_at", "2017-10-29 08:41:29.777963"], ["updated_at", "2017-10-29 08:41:29.777963"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 11], ["body", "Adventure. Excitement. A Jedi craves not these things."], ["created_at", "2017-10-29 08:41:29.780235"], ["updated_at", "2017-10-29 08:41:29.780235"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 18], ["body", "Fear is the path to the dark side... fear leads to anger... anger leads to hate... hate leads to suffering."], ["created_at", "2017-10-29 08:41:29.784469"], ["updated_at", "2017-10-29 08:41:29.784469"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 21], ["body", "You'll find I'm full of surprises!"], ["created_at", "2017-10-29 08:41:29.787782"], ["updated_at", "2017-10-29 08:41:29.787782"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 47], ["body", "A Jedi uses the Force for knowledge and defense, never for attack."], ["created_at", "2017-10-29 08:41:29.791654"], ["updated_at", "2017-10-29 08:41:29.791654"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 17], ["body", "Judge me by my size, do you?"], ["created_at", "2017-10-29 08:41:29.794760"], ["updated_at", "2017-10-29 08:41:29.794760"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 33], ["body", "You'll find I'm full of surprises!"], ["created_at", "2017-10-29 08:41:29.797344"], ["updated_at", "2017-10-29 08:41:29.797344"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 1], ["body", "Only at the end do you realize the power of the Dark Side."], ["created_at", "2017-10-29 08:41:29.801338"], ["updated_at", "2017-10-29 08:41:29.801338"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 28], ["body", "That is why you fail."], ["created_at", "2017-10-29 08:41:29.805223"], ["updated_at", "2017-10-29 08:41:29.805223"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 5], ["body", "You are unwise to lower your defenses!"], ["created_at", "2017-10-29 08:41:29.808258"], ["updated_at", "2017-10-29 08:41:29.808258"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 19], ["body", "You know, that little droid is going to cause me a lot of trouble."], ["created_at", "2017-10-29 08:41:29.810648"], ["updated_at", "2017-10-29 08:41:29.810648"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 5], ["body", "Now, witness the power of this fully operational battle station."], ["created_at", "2017-10-29 08:41:29.814960"], ["updated_at", "2017-10-29 08:41:29.814960"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 27], ["body", "You know, that little droid is going to cause me a lot of trouble."], ["created_at", "2017-10-29 08:41:29.818262"], ["updated_at", "2017-10-29 08:41:29.818262"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 44], ["body", "You are unwise to lower your defenses!"], ["created_at", "2017-10-29 08:41:29.822817"], ["updated_at", "2017-10-29 08:41:29.822817"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 31], ["body", "You know, that little droid is going to cause me a lot of trouble."], ["created_at", "2017-10-29 08:41:29.827353"], ["updated_at", "2017-10-29 08:41:29.827353"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 18], ["body", "Strike me down, and I will become more powerful than you could possibly imagine."], ["created_at", "2017-10-29 08:41:29.831291"], ["updated_at", "2017-10-29 08:41:29.831291"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 19], ["body", "I find your lack of faith disturbing."], ["created_at", "2017-10-29 08:41:29.833978"], ["updated_at", "2017-10-29 08:41:29.833978"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 19], ["body", "Truly wonderful, the mind of a child is."], ["created_at", "2017-10-29 08:41:29.838301"], ["updated_at", "2017-10-29 08:41:29.838301"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 29], ["body", "If they follow standard Imperial procedure, they'll dump their garbage before they go to light-speed."], ["created_at", "2017-10-29 08:41:29.842564"], ["updated_at", "2017-10-29 08:41:29.842564"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 22], ["body", "Fear is the path to the dark side... fear leads to anger... anger leads to hate... hate leads to suffering."], ["created_at", "2017-10-29 08:41:29.845418"], ["updated_at", "2017-10-29 08:41:29.845418"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 29], ["body", "If they follow standard Imperial procedure, they'll dump their garbage before they go to light-speed."], ["created_at", "2017-10-29 08:41:29.849777"], ["updated_at", "2017-10-29 08:41:29.849777"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 47], ["body", "Shut him up or shut him down."], ["created_at", "2017-10-29 08:41:29.852749"], ["updated_at", "2017-10-29 08:41:29.852749"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 7], ["body", "Wars not make one great."], ["created_at", "2017-10-29 08:41:29.856565"], ["updated_at", "2017-10-29 08:41:29.856565"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 35], ["body", "Fear is the path to the dark side... fear leads to anger... anger leads to hate... hate leads to suffering."], ["created_at", "2017-10-29 08:41:29.859888"], ["updated_at", "2017-10-29 08:41:29.859888"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 14], ["body", "It's not impossible. I used to bullseye womp rats in my T-16 back home, they're not much bigger than two meters."], ["created_at", "2017-10-29 08:41:29.862863"], ["updated_at", "2017-10-29 08:41:29.862863"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 4], ["body", "Judge me by my size, do you?"], ["created_at", "2017-10-29 08:41:29.866968"], ["updated_at", "2017-10-29 08:41:29.866968"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 3], ["body", "Well, you said you wanted to be around when I made a mistake."], ["created_at", "2017-10-29 08:41:29.871501"], ["updated_at", "2017-10-29 08:41:29.871501"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 31], ["body", "Only at the end do you realize the power of the Dark Side."], ["created_at", "2017-10-29 08:41:29.874583"], ["updated_at", "2017-10-29 08:41:29.874583"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 48], ["body", "Aren't you a little short for a Stormtrooper?"], ["created_at", "2017-10-29 08:41:29.878511"], ["updated_at", "2017-10-29 08:41:29.878511"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 37], ["body", "If you're saying that coming here was a bad idea, I'm starting to agree with you."], ["created_at", "2017-10-29 08:41:29.882575"], ["updated_at", "2017-10-29 08:41:29.882575"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 20], ["body", "Strike me down, and I will become more powerful than you could possibly imagine."], ["created_at", "2017-10-29 08:41:29.886074"], ["updated_at", "2017-10-29 08:41:29.886074"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 39], ["body", "Do. Or do not. There is no try."], ["created_at", "2017-10-29 08:41:29.890135"], ["updated_at", "2017-10-29 08:41:29.890135"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 38], ["body", "Who's the more foolish; the fool, or the fool who follows him?"], ["created_at", "2017-10-29 08:41:29.894108"], ["updated_at", "2017-10-29 08:41:29.894108"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 10], ["body", "That is why you fail."], ["created_at", "2017-10-29 08:41:29.897223"], ["updated_at", "2017-10-29 08:41:29.897223"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 19], ["body", "You are unwise to lower your defenses!"], ["created_at", "2017-10-29 08:41:29.900896"], ["updated_at", "2017-10-29 08:41:29.900896"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 22], ["body", "I find your lack of faith disturbing."], ["created_at", "2017-10-29 08:41:29.903557"], ["updated_at", "2017-10-29 08:41:29.903557"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 4], ["body", "Adventure. Excitement. A Jedi craves not these things."], ["created_at", "2017-10-29 08:41:29.907471"], ["updated_at", "2017-10-29 08:41:29.907471"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 36], ["body", "You know, that little droid is going to cause me a lot of trouble."], ["created_at", "2017-10-29 08:41:29.911118"], ["updated_at", "2017-10-29 08:41:29.911118"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 23], ["body", "Now, witness the power of this fully operational battle station."], ["created_at", "2017-10-29 08:41:29.914688"], ["updated_at", "2017-10-29 08:41:29.914688"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 13], ["body", "A Jedi uses the Force for knowledge and defense, never for attack."], ["created_at", "2017-10-29 08:41:29.918198"], ["updated_at", "2017-10-29 08:41:29.918198"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 23], ["body", "Bounty hunters! We don't need this scum."], ["created_at", "2017-10-29 08:41:29.922100"], ["updated_at", "2017-10-29 08:41:29.922100"]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 10], ["body", "I find your lack of faith disturbing."], ["created_at", "2017-10-29 08:41:29.926917"], ["updated_at", "2017-10-29 08:41:29.926917"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 37], ["body", "Only at the end do you realize the power of the Dark Side."], ["created_at", "2017-10-29 08:41:29.930487"], ["updated_at", "2017-10-29 08:41:29.930487"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 3], ["body", "Truly wonderful, the mind of a child is."], ["created_at", "2017-10-29 08:41:29.934444"], ["updated_at", "2017-10-29 08:41:29.934444"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 50], ["body", "Fear is the path to the dark side... fear leads to anger... anger leads to hate... hate leads to suffering."], ["created_at", "2017-10-29 08:41:29.938275"], ["updated_at", "2017-10-29 08:41:29.938275"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 6], ["body", "A Jedi uses the Force for knowledge and defense, never for attack."], ["created_at", "2017-10-29 08:41:29.941731"], ["updated_at", "2017-10-29 08:41:29.941731"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Lando Calrissian"], ["body", "Commodi ea excepturi est exercitationem aut. Velit hic mollitia quasi vel magnam quia. Omnis enim ea. In odit quas dignissimos tempora provident ad magnam. Exercitationem ipsum aliquid sapiente omnis."], ["created_at", "2017-10-29 08:46:03.093161"], ["updated_at", "2017-10-29 08:46:03.093161"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Borvo the Hutt"], ["body", "Reiciendis voluptas incidunt fugiat voluptas a voluptas. Aliquam eos sapiente sint. Quidem omnis aspernatur quasi. Dignissimos quaerat doloremque cumque quisquam quo ut quam."], ["created_at", "2017-10-29 08:46:03.100107"], ["updated_at", "2017-10-29 08:46:03.100107"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Qui-Gon Jinn"], ["body", "Praesentium aut quia dolorem deserunt. Officiis voluptates aperiam in quia. Eos iusto laborum molestiae id quidem dolor veritatis."], ["created_at", "2017-10-29 08:46:03.102973"], ["updated_at", "2017-10-29 08:46:03.102973"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Darth Maul"], ["body", "Aliquid sequi repellendus molestiae aspernatur quod iusto. Sapiente deserunt error itaque cumque labore et. Nam fuga eos maxime."], ["created_at", "2017-10-29 08:46:03.106202"], ["updated_at", "2017-10-29 08:46:03.106202"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Poe Dameron"], ["body", "Dolore repudiandae voluptas eveniet qui ullam sequi quibusdam. Praesentium est esse neque dolores quae unde omnis. Id rerum commodi cupiditate quaerat. Est eveniet ducimus et laborum iusto fugiat cupiditate."], ["created_at", "2017-10-29 08:46:03.108939"], ["updated_at", "2017-10-29 08:46:03.108939"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Chewbacca"], ["body", "Natus tempore sed quibusdam reiciendis. Eos laboriosam sunt. Suscipit sit qui. Nobis et dolor qui."], ["created_at", "2017-10-29 08:46:03.111271"], ["updated_at", "2017-10-29 08:46:03.111271"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Yoda"], ["body", "Eaque odit atque vitae incidunt omnis iusto. Hic quasi et ab. Nesciunt temporibus perspiciatis in laborum. Voluptatem eos assumenda suscipit minus. Laudantium dolorem itaque omnis unde praesentium natus omnis."], ["created_at", "2017-10-29 08:46:03.113500"], ["updated_at", "2017-10-29 08:46:03.113500"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Anakin Skywalker"], ["body", "Quae exercitationem mollitia voluptas sit. Qui aliquam qui quibusdam. Autem sit unde deserunt et rerum aperiam dignissimos."], ["created_at", "2017-10-29 08:46:03.115272"], ["updated_at", "2017-10-29 08:46:03.115272"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Darth Maul"], ["body", "Qui quia nulla. Saepe adipisci quis expedita nisi cumque eaque minus. Consequuntur ut ad est quod necessitatibus dignissimos doloremque."], ["created_at", "2017-10-29 08:46:03.116890"], ["updated_at", "2017-10-29 08:46:03.116890"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Jango Fett"], ["body", "Quidem est ex voluptatibus. Qui placeat soluta eos ipsum quae. Et nobis numquam similique nulla excepturi et id. Quia quis sunt hic. Deleniti corrupti consequuntur fugit."], ["created_at", "2017-10-29 08:46:03.118637"], ["updated_at", "2017-10-29 08:46:03.118637"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Obi-Wan Kenobi"], ["body", "Quia quo est praesentium et et. Sint laboriosam fugit quo autem sed dolor placeat. Vitae soluta praesentium eum esse et."], ["created_at", "2017-10-29 08:46:03.120437"], ["updated_at", "2017-10-29 08:46:03.120437"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Boba Fett"], ["body", "Nobis autem suscipit molestiae est est. Minima inventore autem et blanditiis dolores necessitatibus. Velit amet nulla delectus fugit."], ["created_at", "2017-10-29 08:46:03.122224"], ["updated_at", "2017-10-29 08:46:03.122224"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Qui-Gon Jinn"], ["body", "Quia quis excepturi quaerat. Dolores ut ducimus omnis facilis et incidunt vel. Corrupti quae deserunt ullam iusto et. Aliquam excepturi consectetur dolore."], ["created_at", "2017-10-29 08:46:03.124706"], ["updated_at", "2017-10-29 08:46:03.124706"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Wedge Antilles"], ["body", "Ab sunt sit hic pariatur laborum exercitationem ea. Unde voluptatem magnam. Non facere officiis aut ex nemo. Ut reiciendis repellat eveniet voluptatem delectus consequatur commodi."], ["created_at", "2017-10-29 08:46:03.127565"], ["updated_at", "2017-10-29 08:46:03.127565"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ki-Adi-Mundi"], ["body", "Sint quas tempore ut eveniet. Nihil ipsum quas reiciendis exercitationem. Pariatur magni sunt voluptate repellendus consequatur dolor. Minima dolores ut omnis quae reprehenderit excepturi ullam."], ["created_at", "2017-10-29 08:46:03.130103"], ["updated_at", "2017-10-29 08:46:03.130103"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Ben Solo"], ["body", "Dolorem doloremque in earum. Libero in cupiditate architecto. Temporibus enim totam."], ["created_at", "2017-10-29 08:46:03.132384"], ["updated_at", "2017-10-29 08:46:03.132384"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Leia Organa"], ["body", "Iste magni vel. A hic cumque amet pariatur rerum. Magnam quasi molestias amet aspernatur. Voluptatem iusto praesentium sit et. Minima harum aliquam."], ["created_at", "2017-10-29 08:46:03.134509"], ["updated_at", "2017-10-29 08:46:03.134509"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Darth Caedus"], ["body", "Sunt temporibus consequatur. Molestias laborum nobis. Possimus ut rerum quidem at ab eum consectetur. Atque aliquam dignissimos est repudiandae nihil aperiam. Vel maiores iusto."], ["created_at", "2017-10-29 08:46:03.137229"], ["updated_at", "2017-10-29 08:46:03.137229"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Mace Windu"], ["body", "Et mollitia unde sit magni. Ut culpa ut iusto. Quae id animi fugiat numquam ipsa. Omnis aut quos facilis mollitia et."], ["created_at", "2017-10-29 08:46:03.140166"], ["updated_at", "2017-10-29 08:46:03.140166"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Qui-Gon Jinn"], ["body", "Est debitis autem quidem. Recusandae asperiores ut ut debitis eum. Natus sapiente dicta vitae aperiam harum laborum culpa. Saepe placeat ut velit quaerat accusantium. Consequatur pariatur ut."], ["created_at", "2017-10-29 08:46:03.142889"], ["updated_at", "2017-10-29 08:46:03.142889"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Yoda"], ["body", "Sunt rem sit. Sint qui optio eveniet recusandae non consectetur et. Nam neque fugiat ex dolorum. Tempora temporibus itaque aperiam et iusto porro."], ["created_at", "2017-10-29 08:46:03.145453"], ["updated_at", "2017-10-29 08:46:03.145453"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Darth Maul"], ["body", "Minima animi ullam. Sed molestiae perferendis nostrum. Iste et esse aut animi rem."], ["created_at", "2017-10-29 08:46:03.147399"], ["updated_at", "2017-10-29 08:46:03.147399"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Poe Dameron"], ["body", "Alias ullam modi illum. Minima officiis hic voluptatem facilis et aut inventore. Et debitis quis molestiae veniam et. Repudiandae commodi dignissimos. Sed fuga est a."], ["created_at", "2017-10-29 08:46:03.149768"], ["updated_at", "2017-10-29 08:46:03.149768"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Luke Skywalker"], ["body", "Quaerat corrupti ad quis blanditiis. Tempore nisi animi esse. Sit consequatur voluptatibus."], ["created_at", "2017-10-29 08:46:03.152406"], ["updated_at", "2017-10-29 08:46:03.152406"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Boba Fett"], ["body", "Quod dolore maiores modi. Voluptatibus aut nesciunt eos. Reprehenderit nostrum unde quo commodi dolor laboriosam accusantium. Quis optio consequatur reiciendis porro hic aut. Impedit harum provident dolore magnam."], ["created_at", "2017-10-29 08:46:03.155014"], ["updated_at", "2017-10-29 08:46:03.155014"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Darth Maul"], ["body", "Quia totam enim qui voluptas. Reprehenderit ut provident laboriosam ad aspernatur. Odit placeat cupiditate numquam ipsa est dolorum fugit. Optio aliquid expedita odio. Aliquam nisi sed tempore voluptatem."], ["created_at", "2017-10-29 08:46:03.158486"], ["updated_at", "2017-10-29 08:46:03.158486"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Darth Vader"], ["body", "Quibusdam alias sunt expedita. Totam soluta accusantium eos fugiat cupiditate qui distinctio. Non ipsam quos modi nesciunt minima. Asperiores dolor qui cupiditate ex excepturi facere. Perferendis commodi qui consequatur."], ["created_at", "2017-10-29 08:46:03.160701"], ["updated_at", "2017-10-29 08:46:03.160701"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Jabba the Hutt"], ["body", "Atque vel sunt iure similique voluptas numquam rerum. Et suscipit rerum beatae voluptatibus et laudantium aut. Asperiores saepe deleniti inventore. Omnis debitis vel ducimus quidem aperiam nihil dolor."], ["created_at", "2017-10-29 08:46:03.163352"], ["updated_at", "2017-10-29 08:46:03.163352"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ben Solo"], ["body", "Qui possimus nostrum qui alias ut. Perspiciatis eligendi molestiae debitis architecto laudantium dolorem. Dolor et in non animi. Corrupti beatae culpa nihil et voluptas nihil quisquam."], ["created_at", "2017-10-29 08:46:03.165512"], ["updated_at", "2017-10-29 08:46:03.165512"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Padme Amidala"], ["body", "Ex dicta repellat. Qui quibusdam occaecati accusamus ut voluptatum. Ut laborum eaque voluptates illo incidunt. Molestiae provident reprehenderit facilis quo. Beatae ratione quisquam quis."], ["created_at", "2017-10-29 08:46:03.167838"], ["updated_at", "2017-10-29 08:46:03.167838"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Leia Organa"], ["body", "Quis aut occaecati. Totam architecto et laborum exercitationem eos placeat modi. Est fugit et autem sit."], ["created_at", "2017-10-29 08:46:03.170410"], ["updated_at", "2017-10-29 08:46:03.170410"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Count Dooku"], ["body", "Et non unde est reiciendis facere a expedita. Omnis rerum suscipit molestiae hic et qui rerum. Culpa quaerat qui ex magni neque reiciendis ut. Saepe et tempora excepturi iste."], ["created_at", "2017-10-29 08:46:03.172332"], ["updated_at", "2017-10-29 08:46:03.172332"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Jar Jar Binks"], ["body", "Temporibus saepe qui et. Amet ratione aliquam nihil quasi. Porro cum vel. Rerum enim laudantium et ea."], ["created_at", "2017-10-29 08:46:03.174860"], ["updated_at", "2017-10-29 08:46:03.174860"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Darth Maul"], ["body", "Labore voluptas et. Quia iure id eius molestiae ratione asperiores minus. Maiores ut numquam quidem sit. Sed culpa rerum ea. Impedit eligendi ratione omnis non numquam dolorum."], ["created_at", "2017-10-29 08:46:03.177153"], ["updated_at", "2017-10-29 08:46:03.177153"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Darth Maul"], ["body", "Adipisci in et laboriosam atque ipsa nulla cupiditate. Voluptates nemo dolorem consequatur voluptatem laudantium aperiam. Dolor velit natus dignissimos nihil ut. Eum corporis non."], ["created_at", "2017-10-29 08:46:03.179114"], ["updated_at", "2017-10-29 08:46:03.179114"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Sebulba"], ["body", "Ad sapiente aperiam aspernatur consequatur repellat. Architecto iste occaecati veniam molestiae omnis quod ut. Enim sed et occaecati eum."], ["created_at", "2017-10-29 08:46:03.182042"], ["updated_at", "2017-10-29 08:46:03.182042"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Mace Windu"], ["body", "Ut delectus hic doloribus nam at nisi iusto. Quam commodi magnam deserunt iusto. Aut amet vel enim."], ["created_at", "2017-10-29 08:46:03.185438"], ["updated_at", "2017-10-29 08:46:03.185438"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Yoda"], ["body", "Quibusdam sint cupiditate nisi necessitatibus. Eveniet et ullam quia harum consequatur porro eaque. Provident et voluptatem."], ["created_at", "2017-10-29 08:46:03.188085"], ["updated_at", "2017-10-29 08:46:03.188085"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Poe Dameron"], ["body", "Aperiam sint repudiandae vel. Consequatur nobis repellat illum. In qui dolores nobis sit perspiciatis porro facilis. Cum tempore a dolor sit et quis architecto. Quos exercitationem quidem provident rerum est."], ["created_at", "2017-10-29 08:46:03.191192"], ["updated_at", "2017-10-29 08:46:03.191192"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Ben Solo"], ["body", "Blanditiis dolores quo. Aut vel illo sint. Soluta ea et officia autem. Debitis asperiores est dolorem alias hic ratione sed."], ["created_at", "2017-10-29 08:46:03.194260"], ["updated_at", "2017-10-29 08:46:03.194260"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Count Dooku"], ["body", "Ratione sint aperiam assumenda atque nam id aut. Facere deleniti non iusto corrupti. Sunt commodi modi. Occaecati alias eos. Ratione numquam maiores esse voluptas suscipit."], ["created_at", "2017-10-29 08:46:03.196481"], ["updated_at", "2017-10-29 08:46:03.196481"]]
+  [1m[35m (0.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Poe Dameron"], ["body", "Et similique enim. Dolorum sunt natus iusto molestiae odio aut iste. Quas magnam laboriosam illum nisi."], ["created_at", "2017-10-29 08:46:03.198093"], ["updated_at", "2017-10-29 08:46:03.198093"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Anakin Skywalker"], ["body", "Officiis doloribus sint. Numquam aut eos consequatur rem non rerum. Ut consequatur et eaque ut et odit. Doloremque dolores expedita est corrupti magni rerum aliquid. Nisi quis qui ut."], ["created_at", "2017-10-29 08:46:03.199986"], ["updated_at", "2017-10-29 08:46:03.199986"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Yoda"], ["body", "Quisquam id et. Tempore provident quibusdam omnis quia quam dolorem qui. Nihil voluptatem aliquam reiciendis vitae. Quisquam ut quas consequatur deserunt deleniti maxime. Aut ab ipsam eos."], ["created_at", "2017-10-29 08:46:03.201910"], ["updated_at", "2017-10-29 08:46:03.201910"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Poe Dameron"], ["body", "Consectetur deserunt omnis quis impedit beatae libero. Ipsam harum repellat ratione doloremque autem error quis. Id dolores qui inventore laudantium explicabo sunt. Omnis vel id vel et voluptatibus. Ipsum aut ex."], ["created_at", "2017-10-29 08:46:03.204576"], ["updated_at", "2017-10-29 08:46:03.204576"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Ki-Adi-Mundi"], ["body", "Id quam est nulla et id pariatur quisquam. Iure quam aperiam et. Mollitia labore et ratione eveniet optio quos officiis."], ["created_at", "2017-10-29 08:46:03.206986"], ["updated_at", "2017-10-29 08:46:03.206986"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Kylo Ren"], ["body", "Illum ut iste laboriosam optio excepturi tenetur commodi. Saepe ut facere. Dicta molestiae sit rerum quibusdam eius animi. Est commodi voluptas rerum facilis repellendus."], ["created_at", "2017-10-29 08:46:03.209571"], ["updated_at", "2017-10-29 08:46:03.209571"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Darth Vader"], ["body", "Ipsum culpa officia. Quod assumenda quam consectetur rerum cupiditate rerum magni. Corporis ducimus eveniet quaerat qui ea itaque. Est autem atque. Quod omnis enim fugiat dolorum."], ["created_at", "2017-10-29 08:46:03.211772"], ["updated_at", "2017-10-29 08:46:03.211772"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Darth Caedus"], ["body", "Dignissimos qui vitae et ut consequatur soluta. Ad optio officia. Id ab quod tempora."], ["created_at", "2017-10-29 08:46:03.213816"], ["updated_at", "2017-10-29 08:46:03.213816"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Wedge Antilles"], ["body", "Eius quidem voluptatem omnis qui. Voluptatem sed maxime error et voluptatibus nulla omnis. Illo ipsum ea nesciunt. Esse quasi minima quo sit."], ["created_at", "2017-10-29 08:46:03.216565"], ["updated_at", "2017-10-29 08:46:03.216565"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 37], ["body", "If they follow standard Imperial procedure, they'll dump their garbage before they go to light-speed."], ["created_at", "2017-10-29 08:46:03.230407"], ["updated_at", "2017-10-29 08:46:03.230407"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 29], ["body", "Adventure. Excitement. A Jedi craves not these things."], ["created_at", "2017-10-29 08:46:03.234643"], ["updated_at", "2017-10-29 08:46:03.234643"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 73], ["body", "Fear is the path to the dark side... fear leads to anger... anger leads to hate... hate leads to suffering."], ["created_at", "2017-10-29 08:46:03.237262"], ["updated_at", "2017-10-29 08:46:03.237262"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 11], ["body", "Fear is the path to the dark side... fear leads to anger... anger leads to hate... hate leads to suffering."], ["created_at", "2017-10-29 08:46:03.239347"], ["updated_at", "2017-10-29 08:46:03.239347"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 32], ["body", "Do. Or do not. There is no try."], ["created_at", "2017-10-29 08:46:03.241990"], ["updated_at", "2017-10-29 08:46:03.241990"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 92], ["body", "You do have your moments. Not many, but you have them."], ["created_at", "2017-10-29 08:46:03.244236"], ["updated_at", "2017-10-29 08:46:03.244236"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 25], ["body", "Fear is the path to the dark side... fear leads to anger... anger leads to hate... hate leads to suffering."], ["created_at", "2017-10-29 08:46:03.246206"], ["updated_at", "2017-10-29 08:46:03.246206"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 70], ["body", "Truly wonderful, the mind of a child is."], ["created_at", "2017-10-29 08:46:03.248869"], ["updated_at", "2017-10-29 08:46:03.248869"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 20], ["body", "No reward is worth this."], ["created_at", "2017-10-29 08:46:03.251556"], ["updated_at", "2017-10-29 08:46:03.251556"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 52], ["body", "No reward is worth this."], ["created_at", "2017-10-29 08:46:03.253919"], ["updated_at", "2017-10-29 08:46:03.253919"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 11], ["body", "You are unwise to lower your defenses!"], ["created_at", "2017-10-29 08:46:03.255988"], ["updated_at", "2017-10-29 08:46:03.255988"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 39], ["body", "Bounty hunters! We don't need this scum."], ["created_at", "2017-10-29 08:46:03.258494"], ["updated_at", "2017-10-29 08:46:03.258494"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 83], ["body", "Never tell me the odds!"], ["created_at", "2017-10-29 08:46:03.260808"], ["updated_at", "2017-10-29 08:46:03.260808"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 97], ["body", "You do have your moments. Not many, but you have them."], ["created_at", "2017-10-29 08:46:03.263092"], ["updated_at", "2017-10-29 08:46:03.263092"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 53], ["body", "Would somebody get this big walking carpet out of my way?"], ["created_at", "2017-10-29 08:46:03.265685"], ["updated_at", "2017-10-29 08:46:03.265685"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 57], ["body", "Wars not make one great."], ["created_at", "2017-10-29 08:46:03.268852"], ["updated_at", "2017-10-29 08:46:03.268852"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 66], ["body", "I have a bad feeling about this."], ["created_at", "2017-10-29 08:46:03.271631"], ["updated_at", "2017-10-29 08:46:03.271631"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 19], ["body", "Wars not make one great."], ["created_at", "2017-10-29 08:46:03.274573"], ["updated_at", "2017-10-29 08:46:03.274573"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 28], ["body", "If you're saying that coming here was a bad idea, I'm starting to agree with you."], ["created_at", "2017-10-29 08:46:03.276818"], ["updated_at", "2017-10-29 08:46:03.276818"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 8], ["body", "Bounty hunters! We don't need this scum."], ["created_at", "2017-10-29 08:46:03.278963"], ["updated_at", "2017-10-29 08:46:03.278963"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 37], ["body", "Do. Or do not. There is no try."], ["created_at", "2017-10-29 08:46:03.280695"], ["updated_at", "2017-10-29 08:46:03.280695"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 16], ["body", "Aren't you a little short for a Stormtrooper?"], ["created_at", "2017-10-29 08:46:03.282443"], ["updated_at", "2017-10-29 08:46:03.282443"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 42], ["body", "Aren't you a little short for a Stormtrooper?"], ["created_at", "2017-10-29 08:46:03.284981"], ["updated_at", "2017-10-29 08:46:03.284981"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 85], ["body", "Wars not make one great."], ["created_at", "2017-10-29 08:46:03.286909"], ["updated_at", "2017-10-29 08:46:03.286909"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 85], ["body", "Truly wonderful, the mind of a child is."], ["created_at", "2017-10-29 08:46:03.289707"], ["updated_at", "2017-10-29 08:46:03.289707"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 76], ["body", "If they follow standard Imperial procedure, they'll dump their garbage before they go to light-speed."], ["created_at", "2017-10-29 08:46:03.291959"], ["updated_at", "2017-10-29 08:46:03.291959"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 90], ["body", "You do have your moments. Not many, but you have them."], ["created_at", "2017-10-29 08:46:03.294441"], ["updated_at", "2017-10-29 08:46:03.294441"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 32], ["body", "Who's the more foolish; the fool, or the fool who follows him?"], ["created_at", "2017-10-29 08:46:03.297322"], ["updated_at", "2017-10-29 08:46:03.297322"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 30], ["body", "Never tell me the odds!"], ["created_at", "2017-10-29 08:46:03.300176"], ["updated_at", "2017-10-29 08:46:03.300176"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 56], ["body", "Adventure. Excitement. A Jedi craves not these things."], ["created_at", "2017-10-29 08:46:03.302383"], ["updated_at", "2017-10-29 08:46:03.302383"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 38], ["body", "Truly wonderful, the mind of a child is."], ["created_at", "2017-10-29 08:46:03.304726"], ["updated_at", "2017-10-29 08:46:03.304726"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 11], ["body", "If they follow standard Imperial procedure, they'll dump their garbage before they go to light-speed."], ["created_at", "2017-10-29 08:46:03.307672"], ["updated_at", "2017-10-29 08:46:03.307672"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 77], ["body", "Truly wonderful, the mind of a child is."], ["created_at", "2017-10-29 08:46:03.310432"], ["updated_at", "2017-10-29 08:46:03.310432"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 41], ["body", "Adventure. Excitement. A Jedi craves not these things."], ["created_at", "2017-10-29 08:46:03.313016"], ["updated_at", "2017-10-29 08:46:03.313016"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 4], ["body", "Only at the end do you realize the power of the Dark Side."], ["created_at", "2017-10-29 08:46:03.315811"], ["updated_at", "2017-10-29 08:46:03.315811"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 94], ["body", "Fear is the path to the dark side... fear leads to anger... anger leads to hate... hate leads to suffering."], ["created_at", "2017-10-29 08:46:03.318112"], ["updated_at", "2017-10-29 08:46:03.318112"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 6], ["body", "You will never find a more wretched hive of scum and villainy. We must be cautious."], ["created_at", "2017-10-29 08:46:03.320177"], ["updated_at", "2017-10-29 08:46:03.320177"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 68], ["body", "Strike me down, and I will become more powerful than you could possibly imagine."], ["created_at", "2017-10-29 08:46:03.322244"], ["updated_at", "2017-10-29 08:46:03.322244"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 93], ["body", "It's not impossible. I used to bullseye womp rats in my T-16 back home, they're not much bigger than two meters."], ["created_at", "2017-10-29 08:46:03.324114"], ["updated_at", "2017-10-29 08:46:03.324114"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 18], ["body", "If you're saying that coming here was a bad idea, I'm starting to agree with you."], ["created_at", "2017-10-29 08:46:03.326510"], ["updated_at", "2017-10-29 08:46:03.326510"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 38], ["body", "Never tell me the odds!"], ["created_at", "2017-10-29 08:46:03.328448"], ["updated_at", "2017-10-29 08:46:03.328448"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 72], ["body", "You know, that little droid is going to cause me a lot of trouble."], ["created_at", "2017-10-29 08:46:03.330453"], ["updated_at", "2017-10-29 08:46:03.330453"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 87], ["body", "Wars not make one great."], ["created_at", "2017-10-29 08:46:03.332220"], ["updated_at", "2017-10-29 08:46:03.332220"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 19], ["body", "Would somebody get this big walking carpet out of my way?"], ["created_at", "2017-10-29 08:46:03.334631"], ["updated_at", "2017-10-29 08:46:03.334631"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 96], ["body", "If you're saying that coming here was a bad idea, I'm starting to agree with you."], ["created_at", "2017-10-29 08:46:03.336465"], ["updated_at", "2017-10-29 08:46:03.336465"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 55], ["body", "You will never find a more wretched hive of scum and villainy. We must be cautious."], ["created_at", "2017-10-29 08:46:03.338818"], ["updated_at", "2017-10-29 08:46:03.338818"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 72], ["body", "Judge me by my size, do you?"], ["created_at", "2017-10-29 08:46:03.341242"], ["updated_at", "2017-10-29 08:46:03.341242"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 86], ["body", "Truly wonderful, the mind of a child is."], ["created_at", "2017-10-29 08:46:03.343164"], ["updated_at", "2017-10-29 08:46:03.343164"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 18], ["body", "Strike me down, and I will become more powerful than you could possibly imagine."], ["created_at", "2017-10-29 08:46:03.345504"], ["updated_at", "2017-10-29 08:46:03.345504"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 22], ["body", "Do. Or do not. There is no try."], ["created_at", "2017-10-29 08:46:03.348091"], ["updated_at", "2017-10-29 08:46:03.348091"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 31], ["body", "Wars not make one great."], ["created_at", "2017-10-29 08:46:03.350334"], ["updated_at", "2017-10-29 08:46:03.350334"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 70], ["body", "Adventure. Excitement. A Jedi craves not these things."], ["created_at", "2017-10-29 08:46:03.352849"], ["updated_at", "2017-10-29 08:46:03.352849"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 72], ["body", "I find your lack of faith disturbing."], ["created_at", "2017-10-29 08:46:03.354872"], ["updated_at", "2017-10-29 08:46:03.354872"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 17], ["body", "R2-D2, you know better than to trust a strange computer!"], ["created_at", "2017-10-29 08:46:03.357922"], ["updated_at", "2017-10-29 08:46:03.357922"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 10], ["body", "Adventure. Excitement. A Jedi craves not these things."], ["created_at", "2017-10-29 08:46:03.360861"], ["updated_at", "2017-10-29 08:46:03.360861"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 99], ["body", "Judge me by my size, do you?"], ["created_at", "2017-10-29 08:46:03.363986"], ["updated_at", "2017-10-29 08:46:03.363986"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 49], ["body", "I have a bad feeling about this."], ["created_at", "2017-10-29 08:46:03.365672"], ["updated_at", "2017-10-29 08:46:03.365672"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 58], ["body", "Adventure. Excitement. A Jedi craves not these things."], ["created_at", "2017-10-29 08:46:03.368069"], ["updated_at", "2017-10-29 08:46:03.368069"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 12], ["body", "A Jedi uses the Force for knowledge and defense, never for attack."], ["created_at", "2017-10-29 08:46:03.370389"], ["updated_at", "2017-10-29 08:46:03.370389"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 22], ["body", "Bounty hunters! We don't need this scum."], ["created_at", "2017-10-29 08:46:03.372955"], ["updated_at", "2017-10-29 08:46:03.372955"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 81], ["body", "A Jedi uses the Force for knowledge and defense, never for attack."], ["created_at", "2017-10-29 08:46:03.375586"], ["updated_at", "2017-10-29 08:46:03.375586"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 5], ["body", "If you're saying that coming here was a bad idea, I'm starting to agree with you."], ["created_at", "2017-10-29 08:46:03.377886"], ["updated_at", "2017-10-29 08:46:03.377886"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 45], ["body", "I find your lack of faith disturbing."], ["created_at", "2017-10-29 08:46:03.379904"], ["updated_at", "2017-10-29 08:46:03.379904"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 41], ["body", "Who's the more foolish; the fool, or the fool who follows him?"], ["created_at", "2017-10-29 08:46:03.381566"], ["updated_at", "2017-10-29 08:46:03.381566"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 29], ["body", "You will never find a more wretched hive of scum and villainy. We must be cautious."], ["created_at", "2017-10-29 08:46:03.383155"], ["updated_at", "2017-10-29 08:46:03.383155"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 24], ["body", "Fear is the path to the dark side... fear leads to anger... anger leads to hate... hate leads to suffering."], ["created_at", "2017-10-29 08:46:03.384899"], ["updated_at", "2017-10-29 08:46:03.384899"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 20], ["body", "Would somebody get this big walking carpet out of my way?"], ["created_at", "2017-10-29 08:46:03.386711"], ["updated_at", "2017-10-29 08:46:03.386711"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 95], ["body", "Only at the end do you realize the power of the Dark Side."], ["created_at", "2017-10-29 08:46:03.388379"], ["updated_at", "2017-10-29 08:46:03.388379"]]
+  [1m[35m (0.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 78], ["body", "Fear is the path to the dark side... fear leads to anger... anger leads to hate... hate leads to suffering."], ["created_at", "2017-10-29 08:46:03.389740"], ["updated_at", "2017-10-29 08:46:03.389740"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 28], ["body", "You do have your moments. Not many, but you have them."], ["created_at", "2017-10-29 08:46:03.391567"], ["updated_at", "2017-10-29 08:46:03.391567"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 22], ["body", "If they follow standard Imperial procedure, they'll dump their garbage before they go to light-speed."], ["created_at", "2017-10-29 08:46:03.393015"], ["updated_at", "2017-10-29 08:46:03.393015"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 96], ["body", "Wars not make one great."], ["created_at", "2017-10-29 08:46:03.394635"], ["updated_at", "2017-10-29 08:46:03.394635"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 45], ["body", "R2-D2, you know better than to trust a strange computer!"], ["created_at", "2017-10-29 08:46:03.396178"], ["updated_at", "2017-10-29 08:46:03.396178"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 18], ["body", "Aren't you a little short for a Stormtrooper?"], ["created_at", "2017-10-29 08:46:03.398688"], ["updated_at", "2017-10-29 08:46:03.398688"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 44], ["body", "Only at the end do you realize the power of the Dark Side."], ["created_at", "2017-10-29 08:46:03.400485"], ["updated_at", "2017-10-29 08:46:03.400485"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 66], ["body", "You will never find a more wretched hive of scum and villainy. We must be cautious."], ["created_at", "2017-10-29 08:46:03.402251"], ["updated_at", "2017-10-29 08:46:03.402251"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 13], ["body", "If you're saying that coming here was a bad idea, I'm starting to agree with you."], ["created_at", "2017-10-29 08:46:03.403742"], ["updated_at", "2017-10-29 08:46:03.403742"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 37], ["body", "R2-D2, you know better than to trust a strange computer!"], ["created_at", "2017-10-29 08:46:03.406168"], ["updated_at", "2017-10-29 08:46:03.406168"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 90], ["body", "You know, that little droid is going to cause me a lot of trouble."], ["created_at", "2017-10-29 08:46:03.408814"], ["updated_at", "2017-10-29 08:46:03.408814"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 66], ["body", "Bounty hunters! We don't need this scum."], ["created_at", "2017-10-29 08:46:03.410676"], ["updated_at", "2017-10-29 08:46:03.410676"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 91], ["body", "Do. Or do not. There is no try."], ["created_at", "2017-10-29 08:46:03.413095"], ["updated_at", "2017-10-29 08:46:03.413095"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 35], ["body", "Shut him up or shut him down."], ["created_at", "2017-10-29 08:46:03.415679"], ["updated_at", "2017-10-29 08:46:03.415679"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 3], ["body", "Wars not make one great."], ["created_at", "2017-10-29 08:46:03.417572"], ["updated_at", "2017-10-29 08:46:03.417572"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 5], ["body", "I find your lack of faith disturbing."], ["created_at", "2017-10-29 08:46:03.419257"], ["updated_at", "2017-10-29 08:46:03.419257"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 4], ["body", "A Jedi uses the Force for knowledge and defense, never for attack."], ["created_at", "2017-10-29 08:46:03.421698"], ["updated_at", "2017-10-29 08:46:03.421698"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 9], ["body", "You know, that little droid is going to cause me a lot of trouble."], ["created_at", "2017-10-29 08:46:03.424372"], ["updated_at", "2017-10-29 08:46:03.424372"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 17], ["body", "Who's the more foolish; the fool, or the fool who follows him?"], ["created_at", "2017-10-29 08:46:03.426683"], ["updated_at", "2017-10-29 08:46:03.426683"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 59], ["body", "Do. Or do not. There is no try."], ["created_at", "2017-10-29 08:46:03.428899"], ["updated_at", "2017-10-29 08:46:03.428899"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 20], ["body", "You'll find I'm full of surprises!"], ["created_at", "2017-10-29 08:46:03.431525"], ["updated_at", "2017-10-29 08:46:03.431525"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 58], ["body", "A Jedi uses the Force for knowledge and defense, never for attack."], ["created_at", "2017-10-29 08:46:03.434156"], ["updated_at", "2017-10-29 08:46:03.434156"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 43], ["body", "Adventure. Excitement. A Jedi craves not these things."], ["created_at", "2017-10-29 08:46:03.436750"], ["updated_at", "2017-10-29 08:46:03.436750"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 18], ["body", "Well, you said you wanted to be around when I made a mistake."], ["created_at", "2017-10-29 08:46:03.438682"], ["updated_at", "2017-10-29 08:46:03.438682"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 25], ["body", "A Jedi uses the Force for knowledge and defense, never for attack."], ["created_at", "2017-10-29 08:46:03.440417"], ["updated_at", "2017-10-29 08:46:03.440417"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 76], ["body", "Adventure. Excitement. A Jedi craves not these things."], ["created_at", "2017-10-29 08:46:03.442164"], ["updated_at", "2017-10-29 08:46:03.442164"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 85], ["body", "You know, that little droid is going to cause me a lot of trouble."], ["created_at", "2017-10-29 08:46:03.443637"], ["updated_at", "2017-10-29 08:46:03.443637"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 32], ["body", "Wars not make one great."], ["created_at", "2017-10-29 08:46:03.445745"], ["updated_at", "2017-10-29 08:46:03.445745"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 35], ["body", "Strike me down, and I will become more powerful than you could possibly imagine."], ["created_at", "2017-10-29 08:46:03.448584"], ["updated_at", "2017-10-29 08:46:03.448584"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 99], ["body", "If you're saying that coming here was a bad idea, I'm starting to agree with you."], ["created_at", "2017-10-29 08:46:03.451312"], ["updated_at", "2017-10-29 08:46:03.451312"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 57], ["body", "You'll find I'm full of surprises!"], ["created_at", "2017-10-29 08:46:03.453797"], ["updated_at", "2017-10-29 08:46:03.453797"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 72], ["body", "You are unwise to lower your defenses!"], ["created_at", "2017-10-29 08:46:03.457613"], ["updated_at", "2017-10-29 08:46:03.457613"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments"
+
+
+Started GET "/posts" for ::1 at 2017-10-29 09:46:11 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 284ms (Views: 272.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts" for ::1 at 2017-10-29 09:46:12 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/69" for ::1 at 2017-10-29 09:46:20 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"69"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 69]]
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 51ms (Views: 38.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/69/edit" for ::1 at 2017-10-29 09:46:21 +0100
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"69"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 69]]
+  Rendered posts/edit.html.erb within layouts/application (422.7ms)
+Completed 200 OK in 447ms (Views: 446.2ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/posts/69" for ::1 at 2017-10-29 09:46:23 +0100
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+YJq0GnYzJMa0wlwTAXsTlgog3bqQuSjWH/b3sna3KQ7VRwh2xeOqKQsExjfz7zf5t7Kw4zcTGtGIfpMIr+r6g==", "post"=>{"title"=>"Mace Windu", "body"=>"Et mollitia unde sit magni. Ut culpa ut iusto. Quae id animi fugiat numquam ipsa. Omnis aut quos facilis mollitia et.333"}, "commit"=>"Save", "id"=>"69"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 69]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "posts" SET "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["body", "Et mollitia unde sit magni. Ut culpa ut iusto. Quae id animi fugiat numquam ipsa. Omnis aut quos facilis mollitia et.333"], ["updated_at", "2017-10-29 08:46:23.601224"], ["id", 69]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/69
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/69" for ::1 at 2017-10-29 09:46:23 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"69"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 69]]
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/posts/69" for ::1 at 2017-10-29 09:46:25 +0100
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"b/tCm9j1JsFWH3TIVnjoC3SifPyYt0l43Kwv64bNWaetLDRqajpk+ujgbqDFsriaylQ1Sf4p4bDC8g55bagu6Q==", "id"=>"69"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 69]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 69]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 69]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 22ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/posts" for ::1 at 2017-10-29 09:46:25 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.7ms)
