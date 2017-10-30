@@ -1495,3 +1495,1526 @@ Processing by PostsController#index as HTML
   [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts"
   Rendered posts/index.html.erb within layouts/application (9.8ms)
 Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for ::1 at 2017-10-29 09:55:57 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 241ms (Views: 224.1ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTopics (20171029105659)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "public" boolean DEFAULT 't', "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20171029105659"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddTopicToPosts (20171029111119)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.4ms)[0m  [1mALTER TABLE "posts" ADD "topic_id" integer[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.6ms)[0m  [1mCREATE  INDEX "index_posts_on_topic_id" ON "posts" ("topic_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20171029111119"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_topic_id' AND type='index'
+
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX "index_comments_on_post_id" ON "comments" ("post_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "topic_id" integer) 
+  [1m[36m (0.7ms)[0m  [1mCREATE  INDEX "index_posts_on_topic_id" ON "posts" ("topic_id")[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "public" boolean DEFAULT 't', "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171029111119')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170517065028')[0m
+  [1m[35m (1.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170517080758')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171029105659')[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (4.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX "index_comments_on_post_id" ON "comments" ("post_id")
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "topic_id" integer) [0m
+  [1m[35m (1.6ms)[0m  CREATE  INDEX "index_posts_on_topic_id" ON "posts" ("topic_id")
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "public" boolean DEFAULT 't', "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171029111119')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170517065028')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170517080758')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171029105659')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Darth Vader"], ["description", "Reprehenderit sit itaque necessitatibus sapiente. Tempora libero dolorem voluptas id cum. Sed placeat quo doloribus est aperiam."], ["created_at", "2017-10-29 11:17:19.056107"], ["updated_at", "2017-10-29 11:17:19.056107"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Jar Jar Binks"], ["description", "Cum delectus et. Esse dicta aut tenetur voluptas qui aliquam ut. Impedit voluptate qui vel."], ["created_at", "2017-10-29 11:17:19.058527"], ["updated_at", "2017-10-29 11:17:19.058527"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Wedge Antilles"], ["description", "Nam quam quas nisi excepturi aut. Autem omnis nobis perspiciatis. Aliquam repudiandae porro in amet eos."], ["created_at", "2017-10-29 11:17:19.060462"], ["updated_at", "2017-10-29 11:17:19.060462"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Sheev Palpatine"], ["description", "Et dolorem quia aut voluptas voluptas quas est. Beatae excepturi commodi at id ipsam accusantium harum. Voluptatem qui asperiores occaecati hic in."], ["created_at", "2017-10-29 11:17:19.062361"], ["updated_at", "2017-10-29 11:17:19.062361"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Han Solo"], ["description", "Exercitationem odit eos molestiae voluptatem. Rerum possimus asperiores quas. Facilis voluptatibus excepturi."], ["created_at", "2017-10-29 11:17:19.064549"], ["updated_at", "2017-10-29 11:17:19.064549"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Watto"], ["description", "Fugiat non delectus. Et nostrum dignissimos nulla repudiandae explicabo dicta. Magni quod molestiae qui voluptas in ut voluptatibus. Est rem explicabo corporis laborum aliquid voluptate."], ["created_at", "2017-10-29 11:17:19.066818"], ["updated_at", "2017-10-29 11:17:19.066818"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Luke Skywalker"], ["description", "Sint possimus ut. Et ducimus est. Suscipit praesentium ut et unde."], ["created_at", "2017-10-29 11:17:19.069408"], ["updated_at", "2017-10-29 11:17:19.069408"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Leia Organa"], ["description", "Sed excepturi magnam laudantium numquam. Fugit dignissimos perspiciatis explicabo assumenda et quas suscipit. Porro unde laborum. Iure eligendi autem impedit sequi ea corrupti. Asperiores sint nemo."], ["created_at", "2017-10-29 11:17:19.071877"], ["updated_at", "2017-10-29 11:17:19.071877"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sheev Palpatine"], ["description", "Deserunt enim explicabo. Et reiciendis facere laboriosam sit. Amet sint excepturi officiis pariatur nisi ea nostrum. Non repellendus ipsum. Natus et placeat autem."], ["created_at", "2017-10-29 11:17:19.075193"], ["updated_at", "2017-10-29 11:17:19.075193"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Qui-Gon Jinn"], ["description", "Voluptatibus velit doloremque id. Labore quam ut amet. Magnam ratione cumque. Aut quam quidem incidunt et. Dolor nobis ut in."], ["created_at", "2017-10-29 11:17:19.077728"], ["updated_at", "2017-10-29 11:17:19.077728"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ki-Adi-Mundi"], ["description", "Maxime ea esse sapiente veniam nihil nihil. Occaecati quam sunt expedita molestias suscipit. Voluptatem placeat repellat."], ["created_at", "2017-10-29 11:17:19.080437"], ["updated_at", "2017-10-29 11:17:19.080437"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Sebulba"], ["description", "Expedita aut dolor voluptas inventore ipsa. Quia quibusdam maiores in ipsum est. Et quia eius repellat. Doloribus iste harum autem."], ["created_at", "2017-10-29 11:17:19.082497"], ["updated_at", "2017-10-29 11:17:19.082497"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Yoda"], ["description", "Culpa nostrum nam minima vero tenetur blanditiis atque. Illo corrupti non. Nemo sed est qui voluptatem. Quaerat facilis temporibus earum quia placeat voluptatibus."], ["created_at", "2017-10-29 11:17:19.084832"], ["updated_at", "2017-10-29 11:17:19.084832"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Yoda"], ["description", "Pariatur et officia excepturi et. Molestiae culpa et. Alias et quos est. Accusamus omnis natus ipsa quia accusantium quas."], ["created_at", "2017-10-29 11:17:19.086723"], ["updated_at", "2017-10-29 11:17:19.086723"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lando Calrissian"], ["description", "Voluptatem id ut praesentium quod. Explicabo beatae similique nesciunt reiciendis. Voluptatem itaque distinctio. Error voluptatum quaerat delectus qui."], ["created_at", "2017-10-29 11:17:19.088973"], ["updated_at", "2017-10-29 11:17:19.088973"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (6.5ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX "index_comments_on_post_id" ON "comments" ("post_id")[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "topic_id" integer) 
+  [1m[36m (0.6ms)[0m  [1mCREATE  INDEX "index_posts_on_topic_id" ON "posts" ("topic_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "public" boolean DEFAULT 't', "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171029111119')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170517065028')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170517080758')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171029105659')[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX "index_comments_on_post_id" ON "comments" ("post_id")
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "topic_id" integer) [0m
+  [1m[35m (0.5ms)[0m  CREATE  INDEX "index_posts_on_topic_id" ON "posts" ("topic_id")
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "public" boolean DEFAULT 't', "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171029111119')[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170517065028')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170517080758')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171029105659')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Luke Skywalker"], ["description", "Ullam in est rerum enim sunt dolores. Ea voluptatibus sed et dolorem eos et sunt. Ut esse blanditiis rerum porro necessitatibus."], ["created_at", "2017-10-29 11:17:53.116409"], ["updated_at", "2017-10-29 11:17:53.116409"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Mace Windu"], ["description", "Impedit tenetur labore iste officiis ipsa unde tempore. Est consequatur omnis sunt deserunt. Quaerat voluptatem iusto."], ["created_at", "2017-10-29 11:17:53.118908"], ["updated_at", "2017-10-29 11:17:53.118908"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Darth Caedus"], ["description", "Laudantium sed nulla aut harum laboriosam corrupti quas. Hic quis et. Fuga quisquam enim quis praesentium."], ["created_at", "2017-10-29 11:17:53.121365"], ["updated_at", "2017-10-29 11:17:53.121365"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Sheev Palpatine"], ["description", "Quod eius vel deleniti. Nihil repellendus rem voluptatem cum alias ea non. Atque excepturi id ut iusto nulla reiciendis. Earum rerum perspiciatis alias omnis minima. Adipisci voluptates aut."], ["created_at", "2017-10-29 11:17:53.123220"], ["updated_at", "2017-10-29 11:17:53.123220"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sebulba"], ["description", "Aut animi culpa quia. Perspiciatis et rerum facilis fugit minima ut ea. Aliquid optio quos voluptatum facere expedita dolorem. Molestiae quibusdam vel magnam voluptatem."], ["created_at", "2017-10-29 11:17:53.124778"], ["updated_at", "2017-10-29 11:17:53.124778"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Wedge Antilles"], ["description", "Voluptatem asperiores tempora quasi eius odio unde sit. Magnam consectetur ab facilis laudantium voluptatem. Consequatur veritatis voluptas dolores. In officiis qui sint accusantium. Eum in dolores commodi similique eum nihil."], ["created_at", "2017-10-29 11:17:53.127048"], ["updated_at", "2017-10-29 11:17:53.127048"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ben Solo"], ["description", "Sequi cumque omnis quas assumenda. Nihil ea porro. Quos voluptas voluptatibus quam. Et quia dolores impedit. Omnis deleniti nesciunt ad voluptatibus suscipit alias."], ["created_at", "2017-10-29 11:17:53.129068"], ["updated_at", "2017-10-29 11:17:53.129068"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Borvo the Hutt"], ["description", "Rem nemo et neque omnis qui sed et. Eligendi qui voluptatem. Temporibus consectetur et pariatur ut veritatis. Laborum doloremque illum fugit cumque ducimus. Id illo libero laboriosam."], ["created_at", "2017-10-29 11:17:53.132006"], ["updated_at", "2017-10-29 11:17:53.132006"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Leia Organa"], ["description", "Ut cumque voluptatem sunt aut voluptatum voluptas. Nesciunt officia nostrum possimus. Et nesciunt aut vero perferendis enim. Est architecto autem repellendus quia vel. Porro aut minima sunt."], ["created_at", "2017-10-29 11:17:53.134749"], ["updated_at", "2017-10-29 11:17:53.134749"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Jabba the Hutt"], ["description", "Cumque quis ea praesentium natus non nam. Aliquam repellat quis illo eum quia perferendis. Quasi ut impedit delectus sint enim."], ["created_at", "2017-10-29 11:17:53.137346"], ["updated_at", "2017-10-29 11:17:53.137346"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Rune Haako"], ["description", "Eos fugit dolor sapiente. Architecto aspernatur dolor neque quos cum. Repellat molestiae est ut."], ["created_at", "2017-10-29 11:17:53.139469"], ["updated_at", "2017-10-29 11:17:53.139469"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Count Dooku"], ["description", "Corrupti voluptas vero laborum assumenda omnis. Nemo mollitia voluptatem. Ullam maxime aut. Nisi veritatis ex. Distinctio hic velit."], ["created_at", "2017-10-29 11:17:53.141933"], ["updated_at", "2017-10-29 11:17:53.141933"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Watto"], ["description", "Modi aut consequatur. Vitae temporibus quos id odit voluptatibus. Voluptatem eos possimus. Non ea optio labore ut."], ["created_at", "2017-10-29 11:17:53.143767"], ["updated_at", "2017-10-29 11:17:53.143767"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Ki-Adi-Mundi"], ["description", "Omnis omnis natus esse atque rerum autem et. Voluptates qui illo rerum eaque rerum vero commodi. Vel accusamus enim similique est. Quo explicabo non. Sint eum odio neque aperiam."], ["created_at", "2017-10-29 11:17:53.146537"], ["updated_at", "2017-10-29 11:17:53.146537"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Qui-Gon Jinn"], ["description", "Qui itaque cumque explicabo architecto sequi quo modi. Ullam veritatis architecto. Delectus in eius."], ["created_at", "2017-10-29 11:17:53.149864"], ["updated_at", "2017-10-29 11:17:53.149864"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX "index_comments_on_post_id" ON "comments" ("post_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "topic_id" integer) 
+  [1m[36m (0.7ms)[0m  [1mCREATE  INDEX "index_posts_on_topic_id" ON "posts" ("topic_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "public" boolean DEFAULT 't', "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171029111119')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170517065028')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170517080758')
+  [1m[36m (1.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171029105659')[0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (5.5ms)[0m  CREATE  INDEX "index_comments_on_post_id" ON "comments" ("post_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "topic_id" integer) [0m
+  [1m[35m (1.3ms)[0m  CREATE  INDEX "index_posts_on_topic_id" ON "posts" ("topic_id")
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "public" boolean DEFAULT 't', "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20171029111119')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170517065028')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170517080758')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20171029105659')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Han Solo"], ["description", "Repellat ad id consectetur odio dolorem. Soluta et qui eum sint. Reprehenderit sed nostrum sequi nesciunt quae vitae porro."], ["created_at", "2017-10-29 11:18:08.033185"], ["updated_at", "2017-10-29 11:18:08.033185"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Watto"], ["description", "Officia sit voluptate accusantium animi veniam. Fugit distinctio consequatur aliquam ipsa. Doloremque qui cupiditate aut in impedit aliquam. Eum perspiciatis ea."], ["created_at", "2017-10-29 11:18:08.035443"], ["updated_at", "2017-10-29 11:18:08.035443"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Poe Dameron"], ["description", "Magni praesentium totam. Est omnis perspiciatis voluptatem voluptate nam et. Autem voluptatum ab id."], ["created_at", "2017-10-29 11:18:08.037258"], ["updated_at", "2017-10-29 11:18:08.037258"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Lando Calrissian"], ["description", "Ut fugit nemo cum. Numquam eaque aperiam doloremque non. Tempora sequi non molestiae ipsa ex. In qui magnam mollitia. Necessitatibus qui non voluptatibus quis magni voluptates quaerat."], ["created_at", "2017-10-29 11:18:08.039728"], ["updated_at", "2017-10-29 11:18:08.039728"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Rune Haako"], ["description", "Fuga et consequatur optio nam harum expedita qui. Quos est consequatur velit sit quas incidunt. Architecto explicabo consequatur maxime at quia consequatur. Quia voluptatum explicabo eos quis omnis maxime ad. Numquam minus et eum illo dolore aut."], ["created_at", "2017-10-29 11:18:08.041979"], ["updated_at", "2017-10-29 11:18:08.041979"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Darth Sidious"], ["description", "Quia ullam hic ut non. Tenetur id sit non provident nesciunt. Sit vero mollitia. Odio deleniti autem inventore. Quos ut sapiente voluptas temporibus quibusdam."], ["created_at", "2017-10-29 11:18:08.044695"], ["updated_at", "2017-10-29 11:18:08.044695"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Luke Skywalker"], ["description", "Reprehenderit voluptatem non autem doloremque. Eos praesentium dolores nesciunt illum nemo. Perferendis dolor occaecati eos delectus ipsa voluptatem. Velit sed dolore in vel ipsum. In voluptatem veritatis nostrum architecto aut ea."], ["created_at", "2017-10-29 11:18:08.047455"], ["updated_at", "2017-10-29 11:18:08.047455"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Jar Jar Binks"], ["description", "Reprehenderit inventore est. Ipsa culpa maxime enim asperiores eum. Ratione voluptates ipsam ut quibusdam. Quis iusto esse doloribus aperiam."], ["created_at", "2017-10-29 11:18:08.049914"], ["updated_at", "2017-10-29 11:18:08.049914"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Watto"], ["description", "Non neque excepturi explicabo recusandae voluptatum. Accusamus aperiam architecto eos qui. Exercitationem nihil incidunt error sapiente quo sequi et. Rem ut unde fugiat. Illo facilis autem quae sunt qui."], ["created_at", "2017-10-29 11:18:08.052065"], ["updated_at", "2017-10-29 11:18:08.052065"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Jango Fett"], ["description", "Voluptates veniam omnis provident vel eum. Eius pariatur facilis hic blanditiis deleniti et exercitationem. Aut rerum aut ut excepturi. Consequatur minus enim nihil. Odio ut et voluptas inventore voluptatum ut aspernatur."], ["created_at", "2017-10-29 11:18:08.053900"], ["updated_at", "2017-10-29 11:18:08.053900"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Luke Skywalker"], ["description", "Aspernatur rerum amet molestias maiores. Aut in sunt. A velit voluptates."], ["created_at", "2017-10-29 11:18:08.056039"], ["updated_at", "2017-10-29 11:18:08.056039"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Rune Haako"], ["description", "Quis molestiae sunt voluptas aut odit maxime. Ex excepturi atque. Et nihil in."], ["created_at", "2017-10-29 11:18:08.058726"], ["updated_at", "2017-10-29 11:18:08.058726"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Darth Maul"], ["description", "Aspernatur voluptatem pariatur sunt at ea libero quasi. Repellendus voluptate dolores dolor minima placeat. Dignissimos dicta mollitia est dolore consectetur qui. Saepe nam recusandae aut natus possimus. Aut quis nihil at."], ["created_at", "2017-10-29 11:18:08.060653"], ["updated_at", "2017-10-29 11:18:08.060653"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Chewbacca"], ["description", "Velit et minima facere. Doloribus autem quas animi. Officiis a commodi doloribus nihil quisquam. Consequatur velit deleniti in autem et."], ["created_at", "2017-10-29 11:18:08.062714"], ["updated_at", "2017-10-29 11:18:08.062714"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Darth Maul"], ["description", "Omnis est optio ut unde quidem. Ab quasi similique assumenda nobis non beatae laborum. Amet reprehenderit quas dignissimos ea minima. Enim molestias odit. Aut repellat magni nesciunt voluptas rerum."], ["created_at", "2017-10-29 11:18:08.065334"], ["updated_at", "2017-10-29 11:18:08.065334"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 13], ["title", "Count Dooku"], ["body", "Qui voluptatibus voluptatem occaecati. Ab esse et. Sunt autem maiores corrupti perferendis."], ["created_at", "2017-10-29 11:18:08.080140"], ["updated_at", "2017-10-29 11:18:08.080140"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 5], ["title", "Panaka"], ["body", "Hic aut omnis est. Maxime dolores sed officia rerum aut. Est aut occaecati velit ut. Odio et sed quibusdam quidem consequatur temporibus laborum."], ["created_at", "2017-10-29 11:18:08.083016"], ["updated_at", "2017-10-29 11:18:08.083016"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 3], ["title", "Padme Amidala"], ["body", "Officia eum voluptatem. Voluptatum atque praesentium maxime dolor soluta blanditiis. Omnis illum eum fugiat vel nostrum omnis. Ut saepe a sint ratione ea. Dolor tempora aspernatur eum sint est."], ["created_at", "2017-10-29 11:18:08.085274"], ["updated_at", "2017-10-29 11:18:08.085274"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 15], ["title", "Mace Windu"], ["body", "Natus vel ut molestiae recusandae quod rerum qui. Qui repudiandae eum. Autem id vitae rerum. Libero eos sit."], ["created_at", "2017-10-29 11:18:08.087300"], ["updated_at", "2017-10-29 11:18:08.087300"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 7], ["title", "Rune Haako"], ["body", "Ex consequatur eius modi aperiam voluptas quia. Libero corrupti maxime at deleniti amet sed recusandae. Amet numquam ut sed magnam aut voluptatem maiores. Mollitia quisquam tempora eligendi praesentium dolores impedit. Eius quasi quo perspiciatis odio aliquam."], ["created_at", "2017-10-29 11:18:08.090004"], ["updated_at", "2017-10-29 11:18:08.090004"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 4], ["title", "Qui-Gon Jinn"], ["body", "Veritatis voluptas est recusandae. Perspiciatis illum ullam. Illum numquam et omnis esse quia. Consequuntur id dolor tempore."], ["created_at", "2017-10-29 11:18:08.092582"], ["updated_at", "2017-10-29 11:18:08.092582"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 5], ["title", "Han Solo"], ["body", "Dolores similique ipsa ut amet magnam repellendus accusamus. Architecto neque mollitia numquam laboriosam. Delectus fuga sit."], ["created_at", "2017-10-29 11:18:08.095612"], ["updated_at", "2017-10-29 11:18:08.095612"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 11], ["title", "Luke Skywalker"], ["body", "Voluptatibus deleniti dolore et sit atque. Eveniet minus similique. Adipisci pariatur quis."], ["created_at", "2017-10-29 11:18:08.098493"], ["updated_at", "2017-10-29 11:18:08.098493"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 2], ["title", "Han Solo"], ["body", "Et ad iure sed molestiae. Quis soluta possimus et. Sit eum placeat qui natus. Laudantium error sit."], ["created_at", "2017-10-29 11:18:08.101041"], ["updated_at", "2017-10-29 11:18:08.101041"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 7], ["title", "Watto"], ["body", "Qui rerum soluta. Mollitia saepe consequatur veritatis rerum. Necessitatibus dolorum reprehenderit enim. Repellat ut et. Atque harum voluptatem fugit error architecto."], ["created_at", "2017-10-29 11:18:08.104249"], ["updated_at", "2017-10-29 11:18:08.104249"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 5], ["title", "Poe Dameron"], ["body", "Deleniti omnis sit autem soluta assumenda. Laudantium sed qui. Voluptatibus voluptatem qui eum tenetur. Consequatur repudiandae enim et eos non possimus."], ["created_at", "2017-10-29 11:18:08.107067"], ["updated_at", "2017-10-29 11:18:08.107067"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 15], ["title", "Jar Jar Binks"], ["body", "Unde voluptatem ad aliquid. Ut omnis harum aspernatur voluptates iure qui. Dicta animi perspiciatis quam ab odio qui. Laudantium et at. Sint temporibus dolores ea reprehenderit et."], ["created_at", "2017-10-29 11:18:08.110139"], ["updated_at", "2017-10-29 11:18:08.110139"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 8], ["title", "Poe Dameron"], ["body", "Aut sed qui et ipsam. Quos veritatis repellat debitis nulla. Illo reiciendis cupiditate. Cum error similique mollitia qui aperiam sit et. Et non magni earum rerum iure porro."], ["created_at", "2017-10-29 11:18:08.113108"], ["updated_at", "2017-10-29 11:18:08.113108"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 14], ["title", "Borvo the Hutt"], ["body", "Quia eum sapiente doloribus dicta iure. Perspiciatis culpa aliquam praesentium quaerat quae. Magni debitis ut amet sit eligendi. Architecto et a adipisci totam illum. Beatae in debitis."], ["created_at", "2017-10-29 11:18:08.115765"], ["updated_at", "2017-10-29 11:18:08.115765"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 3], ["title", "Count Dooku"], ["body", "Qui quisquam et nemo magnam quia ratione officiis. Non iusto omnis in autem. Consequuntur rerum qui ad qui provident laborum. Veritatis aspernatur neque tempora fugit harum."], ["created_at", "2017-10-29 11:18:08.117710"], ["updated_at", "2017-10-29 11:18:08.117710"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 8], ["title", "Watto"], ["body", "Quis officia omnis ut consequuntur ad omnis a. Itaque ipsa nihil. Inventore optio laborum vitae et. Voluptatem sapiente quae. Quia eum sunt minima et dolore ducimus."], ["created_at", "2017-10-29 11:18:08.120396"], ["updated_at", "2017-10-29 11:18:08.120396"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 3], ["title", "Ben Solo"], ["body", "Magni perspiciatis et hic ut. Nesciunt cum commodi aut veritatis eveniet. Nisi praesentium fugiat laboriosam quia consequatur. Dolore aut ratione qui aut consequatur et."], ["created_at", "2017-10-29 11:18:08.123660"], ["updated_at", "2017-10-29 11:18:08.123660"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 13], ["title", "Anakin Skywalker"], ["body", "Ullam tenetur et sed distinctio voluptas odio. Qui autem error nostrum laboriosam. Commodi animi et iusto quia aut velit assumenda."], ["created_at", "2017-10-29 11:18:08.126611"], ["updated_at", "2017-10-29 11:18:08.126611"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 10], ["title", "Mace Windu"], ["body", "Perferendis est occaecati eius. Ut mollitia exercitationem non consequatur. Ut et omnis sed aut doloremque atque quis."], ["created_at", "2017-10-29 11:18:08.130315"], ["updated_at", "2017-10-29 11:18:08.130315"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 4], ["title", "Mace Windu"], ["body", "Quos ullam sit doloremque natus aliquam magnam. Quam numquam asperiores minus natus quibusdam. Numquam omnis voluptatem molestias recusandae necessitatibus aspernatur. Officiis deserunt ex illum non."], ["created_at", "2017-10-29 11:18:08.133263"], ["updated_at", "2017-10-29 11:18:08.133263"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 1], ["title", "Darth Sidious"], ["body", "Nisi qui numquam. Sunt enim accusantium aliquam sit est possimus. Accusantium et officiis qui harum officia doloribus nihil. Eum velit vero id rem earum sunt iste."], ["created_at", "2017-10-29 11:18:08.136492"], ["updated_at", "2017-10-29 11:18:08.136492"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 2], ["title", "Rune Haako"], ["body", "Sapiente reiciendis repellat atque placeat est quia optio. Voluptatem fugiat quidem id atque. Numquam qui ex animi earum vero. Minus magnam architecto. Molestiae reiciendis at."], ["created_at", "2017-10-29 11:18:08.139518"], ["updated_at", "2017-10-29 11:18:08.139518"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 4], ["title", "Jar Jar Binks"], ["body", "Illum quam et reiciendis cupiditate neque quo. Et saepe qui. Quasi qui eius doloribus aperiam mollitia corporis consequatur. Unde laudantium laborum culpa voluptatem."], ["created_at", "2017-10-29 11:18:08.142616"], ["updated_at", "2017-10-29 11:18:08.142616"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 12], ["title", "Lando Calrissian"], ["body", "Est non natus voluptatem sapiente amet quia eos. Quia ipsum eos voluptates similique. Eveniet asperiores incidunt modi in culpa. Perspiciatis et aspernatur illum. Quia aliquam sunt facilis aspernatur."], ["created_at", "2017-10-29 11:18:08.144912"], ["updated_at", "2017-10-29 11:18:08.144912"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 4], ["title", "Han Solo"], ["body", "Beatae ut eveniet aut aut provident officiis sed. Occaecati ea dolorem voluptatibus. Nihil quisquam voluptate doloribus. Et et voluptatem consequatur."], ["created_at", "2017-10-29 11:18:08.148497"], ["updated_at", "2017-10-29 11:18:08.148497"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 6], ["title", "Jango Fett"], ["body", "Tempora laboriosam id saepe officiis possimus. Non omnis pariatur. Repudiandae dolor quo in voluptatem quidem et."], ["created_at", "2017-10-29 11:18:08.151316"], ["updated_at", "2017-10-29 11:18:08.151316"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 3], ["title", "Obi-Wan Kenobi"], ["body", "Tenetur et sint vel reiciendis saepe consequatur. Eum consequatur architecto ad earum rem et. Harum laboriosam consequatur recusandae atque. Perspiciatis illum consequatur atque. Ex qui placeat dolores facilis accusantium nisi recusandae."], ["created_at", "2017-10-29 11:18:08.153286"], ["updated_at", "2017-10-29 11:18:08.153286"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 4], ["title", "Anakin Skywalker"], ["body", "Voluptas ipsa fuga odio alias debitis. Distinctio incidunt reprehenderit tenetur sapiente minus. Laborum non aspernatur doloremque ut. Quaerat molestiae quia reprehenderit explicabo consequatur."], ["created_at", "2017-10-29 11:18:08.156540"], ["updated_at", "2017-10-29 11:18:08.156540"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 13], ["title", "Sebulba"], ["body", "Blanditiis ex ullam quis sint nostrum velit molestiae. Ut deleniti quos magni. Et occaecati voluptate repudiandae quis sit accusantium eveniet. Perferendis ad consequatur et amet. Ab suscipit aut aliquid ea est magni dolore."], ["created_at", "2017-10-29 11:18:08.159135"], ["updated_at", "2017-10-29 11:18:08.159135"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 13], ["title", "Count Dooku"], ["body", "Reiciendis consequuntur quo similique asperiores nemo optio. Dolorem aliquid praesentium reiciendis non. Commodi eum id qui molestias animi aspernatur."], ["created_at", "2017-10-29 11:18:08.162227"], ["updated_at", "2017-10-29 11:18:08.162227"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 5], ["title", "Jar Jar Binks"], ["body", "Earum dolorum autem veniam corrupti pariatur et. Nostrum est quis nihil dignissimos. Quaerat repellendus nihil ut totam vitae repudiandae consectetur."], ["created_at", "2017-10-29 11:18:08.165206"], ["updated_at", "2017-10-29 11:18:08.165206"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 13], ["title", "Borvo the Hutt"], ["body", "Recusandae molestiae impedit. Ipsam quibusdam dolores veniam. Velit voluptates et voluptas. Excepturi ut iste deserunt cum et earum tempore."], ["created_at", "2017-10-29 11:18:08.168093"], ["updated_at", "2017-10-29 11:18:08.168093"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 13], ["title", "Darth Caedus"], ["body", "Reiciendis necessitatibus iure exercitationem enim facere. In vero alias laudantium tenetur nihil dolorem. Incidunt nobis quas velit."], ["created_at", "2017-10-29 11:18:08.170709"], ["updated_at", "2017-10-29 11:18:08.170709"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 10], ["title", "Jar Jar Binks"], ["body", "Non impedit nam deleniti ipsa eveniet placeat. Omnis laudantium asperiores sed nam dolor. Ducimus sunt quidem et veritatis qui minima eos."], ["created_at", "2017-10-29 11:18:08.172840"], ["updated_at", "2017-10-29 11:18:08.172840"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 10], ["title", "Jar Jar Binks"], ["body", "Autem nesciunt modi voluptatibus mollitia est. Nobis molestiae rerum. Quo sit temporibus exercitationem. Consequatur iure occaecati earum tenetur est."], ["created_at", "2017-10-29 11:18:08.176297"], ["updated_at", "2017-10-29 11:18:08.176297"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 14], ["title", "Han Solo"], ["body", "Labore et aut sit excepturi est id. Recusandae voluptatem laudantium quia voluptatum quae. Quam ipsam natus explicabo atque. Vero et saepe eaque quas facere dolore."], ["created_at", "2017-10-29 11:18:08.180846"], ["updated_at", "2017-10-29 11:18:08.180846"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 1], ["title", "Han Solo"], ["body", "Quo voluptate illum ut quibusdam. Maiores occaecati itaque. Repudiandae ipsam saepe culpa molestias quas quia. Tempora alias fugit sapiente."], ["created_at", "2017-10-29 11:18:08.183397"], ["updated_at", "2017-10-29 11:18:08.183397"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 3], ["title", "Watto"], ["body", "Quos dolores blanditiis. Aut aut voluptatem officiis. Minus dolore officiis perspiciatis quo voluptates quia sapiente."], ["created_at", "2017-10-29 11:18:08.186119"], ["updated_at", "2017-10-29 11:18:08.186119"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 4], ["title", "Luke Skywalker"], ["body", "Maxime distinctio consequatur vel illum. Eos rerum pariatur explicabo qui excepturi laboriosam dolor. Autem sed et minus."], ["created_at", "2017-10-29 11:18:08.188072"], ["updated_at", "2017-10-29 11:18:08.188072"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 14], ["title", "Darth Maul"], ["body", "In praesentium molestiae autem cum. Quod dolores accusantium architecto. Libero non sint et itaque. Quidem aut et ea."], ["created_at", "2017-10-29 11:18:08.191914"], ["updated_at", "2017-10-29 11:18:08.191914"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 8], ["title", "Bail Organa"], ["body", "Dignissimos vitae facilis accusantium. Qui dolore in illum nesciunt molestias reprehenderit et. Minima cumque nihil nam non. Et non quod tempora optio sed. Perspiciatis et iure libero veritatis quis et."], ["created_at", "2017-10-29 11:18:08.194861"], ["updated_at", "2017-10-29 11:18:08.194861"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 11], ["title", "Han Solo"], ["body", "Non totam exercitationem velit quod. Rem distinctio incidunt tempore rerum ullam dolorem. Aut consequuntur provident aperiam culpa temporibus. Inventore sed excepturi tenetur doloremque repellendus ab."], ["created_at", "2017-10-29 11:18:08.197080"], ["updated_at", "2017-10-29 11:18:08.197080"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 13], ["title", "Borvo the Hutt"], ["body", "Veniam et optio labore repudiandae tempore nihil. Rem dolores nisi voluptas facere debitis optio distinctio. Quibusdam qui sint. Voluptates aliquid exercitationem. Enim molestiae quis maxime non autem et soluta."], ["created_at", "2017-10-29 11:18:08.199328"], ["updated_at", "2017-10-29 11:18:08.199328"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 5], ["title", "Qui-Gon Jinn"], ["body", "Et non sit labore qui aut. Nulla corrupti rerum mollitia accusamus. Praesentium facere vitae et rerum modi. Neque ullam hic iusto laboriosam fuga distinctio quaerat."], ["created_at", "2017-10-29 11:18:08.201975"], ["updated_at", "2017-10-29 11:18:08.201975"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 6], ["title", "Yoda"], ["body", "Voluptatem enim eos. Doloremque voluptas reiciendis cum qui. Explicabo quia ratione earum. Consequuntur consectetur mollitia earum nesciunt repudiandae incidunt."], ["created_at", "2017-10-29 11:18:08.205427"], ["updated_at", "2017-10-29 11:18:08.205427"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 4], ["title", "Rune Haako"], ["body", "Distinctio consequatur quidem vel qui. Hic quasi enim ut ducimus repellendus non. Ea consequatur libero eos officiis laborum magnam tempora. Adipisci necessitatibus et exercitationem quo eaque. Tenetur fugit aut dolores natus blanditiis fugiat a."], ["created_at", "2017-10-29 11:18:08.208041"], ["updated_at", "2017-10-29 11:18:08.208041"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 3], ["title", "Ben Solo"], ["body", "Repellendus est ducimus natus dolorum consequuntur. Eum illum labore error inventore quisquam. Adipisci quia temporibus."], ["created_at", "2017-10-29 11:18:08.211417"], ["updated_at", "2017-10-29 11:18:08.211417"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 11], ["title", "Darth Maul"], ["body", "Cum id sequi ut dolor. Magnam alias id repudiandae quidem. Sunt repudiandae aperiam odio voluptatum amet. Eos autem fugit et natus eligendi. In consequatur hic et delectus incidunt."], ["created_at", "2017-10-29 11:18:08.215247"], ["updated_at", "2017-10-29 11:18:08.215247"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic_id", 12], ["title", "Luke Skywalker"], ["body", "Doloremque dignissimos reprehenderit culpa nobis. Asperiores et cupiditate porro sunt. Eum nihil magnam soluta impedit."], ["created_at", "2017-10-29 11:18:08.218436"], ["updated_at", "2017-10-29 11:18:08.218436"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("topic_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["topic_id", 10], ["title", "Padme Amidala"], ["body", "Quia autem veniam. Asperiores quisquam enim harum tempora optio. Velit explicabo repudiandae qui. Ea ea ipsum consequatur voluptas eius. Accusamus at et quibusdam rerum pariatur."], ["created_at", "2017-10-29 11:18:08.221340"], ["updated_at", "2017-10-29 11:18:08.221340"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 18], ["body", "You do have your moments. Not many, but you have them."], ["created_at", "2017-10-29 11:18:08.229492"], ["updated_at", "2017-10-29 11:18:08.229492"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 10], ["body", "You know, that little droid is going to cause me a lot of trouble."], ["created_at", "2017-10-29 11:18:08.232575"], ["updated_at", "2017-10-29 11:18:08.232575"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 16], ["body", "Who's the more foolish; the fool, or the fool who follows him?"], ["created_at", "2017-10-29 11:18:08.234491"], ["updated_at", "2017-10-29 11:18:08.234491"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 38], ["body", "Strike me down, and I will become more powerful than you could possibly imagine."], ["created_at", "2017-10-29 11:18:08.237073"], ["updated_at", "2017-10-29 11:18:08.237073"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 2], ["body", "Now, witness the power of this fully operational battle station."], ["created_at", "2017-10-29 11:18:08.239244"], ["updated_at", "2017-10-29 11:18:08.239244"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 43], ["body", "Judge me by my size, do you?"], ["created_at", "2017-10-29 11:18:08.241553"], ["updated_at", "2017-10-29 11:18:08.241553"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 23], ["body", "You will never find a more wretched hive of scum and villainy. We must be cautious."], ["created_at", "2017-10-29 11:18:08.243728"], ["updated_at", "2017-10-29 11:18:08.243728"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 40], ["body", "Who's the more foolish; the fool, or the fool who follows him?"], ["created_at", "2017-10-29 11:18:08.246168"], ["updated_at", "2017-10-29 11:18:08.246168"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 29], ["body", "Wars not make one great."], ["created_at", "2017-10-29 11:18:08.247881"], ["updated_at", "2017-10-29 11:18:08.247881"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 3], ["body", "You are unwise to lower your defenses!"], ["created_at", "2017-10-29 11:18:08.250069"], ["updated_at", "2017-10-29 11:18:08.250069"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 21], ["body", "Would somebody get this big walking carpet out of my way?"], ["created_at", "2017-10-29 11:18:08.251789"], ["updated_at", "2017-10-29 11:18:08.251789"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 9], ["body", "You are unwise to lower your defenses!"], ["created_at", "2017-10-29 11:18:08.254140"], ["updated_at", "2017-10-29 11:18:08.254140"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 31], ["body", "A Jedi uses the Force for knowledge and defense, never for attack."], ["created_at", "2017-10-29 11:18:08.255788"], ["updated_at", "2017-10-29 11:18:08.255788"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 50], ["body", "It's not impossible. I used to bullseye womp rats in my T-16 back home, they're not much bigger than two meters."], ["created_at", "2017-10-29 11:18:08.257263"], ["updated_at", "2017-10-29 11:18:08.257263"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 48], ["body", "Only at the end do you realize the power of the Dark Side."], ["created_at", "2017-10-29 11:18:08.259015"], ["updated_at", "2017-10-29 11:18:08.259015"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 21], ["body", "I have a bad feeling about this."], ["created_at", "2017-10-29 11:18:08.261487"], ["updated_at", "2017-10-29 11:18:08.261487"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 11], ["body", "Shut him up or shut him down."], ["created_at", "2017-10-29 11:18:08.263544"], ["updated_at", "2017-10-29 11:18:08.263544"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 11], ["body", "Judge me by my size, do you?"], ["created_at", "2017-10-29 11:18:08.265821"], ["updated_at", "2017-10-29 11:18:08.265821"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 14], ["body", "Would somebody get this big walking carpet out of my way?"], ["created_at", "2017-10-29 11:18:08.267341"], ["updated_at", "2017-10-29 11:18:08.267341"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 32], ["body", "Bounty hunters! We don't need this scum."], ["created_at", "2017-10-29 11:18:08.269526"], ["updated_at", "2017-10-29 11:18:08.269526"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 5], ["body", "Bounty hunters! We don't need this scum."], ["created_at", "2017-10-29 11:18:08.271282"], ["updated_at", "2017-10-29 11:18:08.271282"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 50], ["body", "A Jedi uses the Force for knowledge and defense, never for attack."], ["created_at", "2017-10-29 11:18:08.273488"], ["updated_at", "2017-10-29 11:18:08.273488"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 6], ["body", "Wars not make one great."], ["created_at", "2017-10-29 11:18:08.275134"], ["updated_at", "2017-10-29 11:18:08.275134"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 36], ["body", "Would somebody get this big walking carpet out of my way?"], ["created_at", "2017-10-29 11:18:08.277360"], ["updated_at", "2017-10-29 11:18:08.277360"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 6], ["body", "Judge me by my size, do you?"], ["created_at", "2017-10-29 11:18:08.279784"], ["updated_at", "2017-10-29 11:18:08.279784"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 44], ["body", "Do. Or do not. There is no try."], ["created_at", "2017-10-29 11:18:08.281917"], ["updated_at", "2017-10-29 11:18:08.281917"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 41], ["body", "Shut him up or shut him down."], ["created_at", "2017-10-29 11:18:08.284101"], ["updated_at", "2017-10-29 11:18:08.284101"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 45], ["body", "Only at the end do you realize the power of the Dark Side."], ["created_at", "2017-10-29 11:18:08.285824"], ["updated_at", "2017-10-29 11:18:08.285824"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 39], ["body", "You will never find a more wretched hive of scum and villainy. We must be cautious."], ["created_at", "2017-10-29 11:18:08.288048"], ["updated_at", "2017-10-29 11:18:08.288048"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 2], ["body", "Only at the end do you realize the power of the Dark Side."], ["created_at", "2017-10-29 11:18:08.289816"], ["updated_at", "2017-10-29 11:18:08.289816"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 40], ["body", "If they follow standard Imperial procedure, they'll dump their garbage before they go to light-speed."], ["created_at", "2017-10-29 11:18:08.291744"], ["updated_at", "2017-10-29 11:18:08.291744"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 26], ["body", "No reward is worth this."], ["created_at", "2017-10-29 11:18:08.293612"], ["updated_at", "2017-10-29 11:18:08.293612"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 43], ["body", "Never tell me the odds!"], ["created_at", "2017-10-29 11:18:08.295733"], ["updated_at", "2017-10-29 11:18:08.295733"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 47], ["body", "That is why you fail."], ["created_at", "2017-10-29 11:18:08.297391"], ["updated_at", "2017-10-29 11:18:08.297391"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 33], ["body", "If you're saying that coming here was a bad idea, I'm starting to agree with you."], ["created_at", "2017-10-29 11:18:08.299649"], ["updated_at", "2017-10-29 11:18:08.299649"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 39], ["body", "I find your lack of faith disturbing."], ["created_at", "2017-10-29 11:18:08.302134"], ["updated_at", "2017-10-29 11:18:08.302134"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 23], ["body", "I have a bad feeling about this."], ["created_at", "2017-10-29 11:18:08.305208"], ["updated_at", "2017-10-29 11:18:08.305208"]]
+  [1m[36m (5.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 39], ["body", "Do. Or do not. There is no try."], ["created_at", "2017-10-29 11:18:08.312694"], ["updated_at", "2017-10-29 11:18:08.312694"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 1], ["body", "You will never find a more wretched hive of scum and villainy. We must be cautious."], ["created_at", "2017-10-29 11:18:08.316219"], ["updated_at", "2017-10-29 11:18:08.316219"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 36], ["body", "Judge me by my size, do you?"], ["created_at", "2017-10-29 11:18:08.319744"], ["updated_at", "2017-10-29 11:18:08.319744"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 41], ["body", "No reward is worth this."], ["created_at", "2017-10-29 11:18:08.322785"], ["updated_at", "2017-10-29 11:18:08.322785"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 34], ["body", "Never tell me the odds!"], ["created_at", "2017-10-29 11:18:08.326282"], ["updated_at", "2017-10-29 11:18:08.326282"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 40], ["body", "You know, that little droid is going to cause me a lot of trouble."], ["created_at", "2017-10-29 11:18:08.330180"], ["updated_at", "2017-10-29 11:18:08.330180"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 35], ["body", "Fear is the path to the dark side... fear leads to anger... anger leads to hate... hate leads to suffering."], ["created_at", "2017-10-29 11:18:08.332556"], ["updated_at", "2017-10-29 11:18:08.332556"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 2], ["body", "Judge me by my size, do you?"], ["created_at", "2017-10-29 11:18:08.335412"], ["updated_at", "2017-10-29 11:18:08.335412"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 29], ["body", "You are unwise to lower your defenses!"], ["created_at", "2017-10-29 11:18:08.337971"], ["updated_at", "2017-10-29 11:18:08.337971"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 41], ["body", "Adventure. Excitement. A Jedi craves not these things."], ["created_at", "2017-10-29 11:18:08.340891"], ["updated_at", "2017-10-29 11:18:08.340891"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 44], ["body", "Bounty hunters! We don't need this scum."], ["created_at", "2017-10-29 11:18:08.343170"], ["updated_at", "2017-10-29 11:18:08.343170"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 16], ["body", "I find your lack of faith disturbing."], ["created_at", "2017-10-29 11:18:08.345806"], ["updated_at", "2017-10-29 11:18:08.345806"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 23], ["body", "Who's the more foolish; the fool, or the fool who follows him?"], ["created_at", "2017-10-29 11:18:08.347975"], ["updated_at", "2017-10-29 11:18:08.347975"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 2], ["body", "Truly wonderful, the mind of a child is."], ["created_at", "2017-10-29 11:18:08.350699"], ["updated_at", "2017-10-29 11:18:08.350699"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 37], ["body", "Well, you said you wanted to be around when I made a mistake."], ["created_at", "2017-10-29 11:18:08.353287"], ["updated_at", "2017-10-29 11:18:08.353287"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 40], ["body", "Well, you said you wanted to be around when I made a mistake."], ["created_at", "2017-10-29 11:18:08.355675"], ["updated_at", "2017-10-29 11:18:08.355675"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 17], ["body", "Strike me down, and I will become more powerful than you could possibly imagine."], ["created_at", "2017-10-29 11:18:08.358316"], ["updated_at", "2017-10-29 11:18:08.358316"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 29], ["body", "If you're saying that coming here was a bad idea, I'm starting to agree with you."], ["created_at", "2017-10-29 11:18:08.361407"], ["updated_at", "2017-10-29 11:18:08.361407"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 39], ["body", "Well, you said you wanted to be around when I made a mistake."], ["created_at", "2017-10-29 11:18:08.364739"], ["updated_at", "2017-10-29 11:18:08.364739"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 20], ["body", "If they follow standard Imperial procedure, they'll dump their garbage before they go to light-speed."], ["created_at", "2017-10-29 11:18:08.367502"], ["updated_at", "2017-10-29 11:18:08.367502"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 50], ["body", "I find your lack of faith disturbing."], ["created_at", "2017-10-29 11:18:08.369756"], ["updated_at", "2017-10-29 11:18:08.369756"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 9], ["body", "Fear is the path to the dark side... fear leads to anger... anger leads to hate... hate leads to suffering."], ["created_at", "2017-10-29 11:18:08.371732"], ["updated_at", "2017-10-29 11:18:08.371732"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 26], ["body", "You will never find a more wretched hive of scum and villainy. We must be cautious."], ["created_at", "2017-10-29 11:18:08.374418"], ["updated_at", "2017-10-29 11:18:08.374418"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 8], ["body", "Never tell me the odds!"], ["created_at", "2017-10-29 11:18:08.377670"], ["updated_at", "2017-10-29 11:18:08.377670"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 7], ["body", "That is why you fail."], ["created_at", "2017-10-29 11:18:08.380288"], ["updated_at", "2017-10-29 11:18:08.380288"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 16], ["body", "I find your lack of faith disturbing."], ["created_at", "2017-10-29 11:18:08.383123"], ["updated_at", "2017-10-29 11:18:08.383123"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 43], ["body", "Aren't you a little short for a Stormtrooper?"], ["created_at", "2017-10-29 11:18:08.386340"], ["updated_at", "2017-10-29 11:18:08.386340"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 24], ["body", "It's not impossible. I used to bullseye womp rats in my T-16 back home, they're not much bigger than two meters."], ["created_at", "2017-10-29 11:18:08.388963"], ["updated_at", "2017-10-29 11:18:08.388963"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 24], ["body", "You are unwise to lower your defenses!"], ["created_at", "2017-10-29 11:18:08.392306"], ["updated_at", "2017-10-29 11:18:08.392306"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 13], ["body", "Strike me down, and I will become more powerful than you could possibly imagine."], ["created_at", "2017-10-29 11:18:08.395506"], ["updated_at", "2017-10-29 11:18:08.395506"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 7], ["body", "You'll find I'm full of surprises!"], ["created_at", "2017-10-29 11:18:08.398559"], ["updated_at", "2017-10-29 11:18:08.398559"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 43], ["body", "Would somebody get this big walking carpet out of my way?"], ["created_at", "2017-10-29 11:18:08.401374"], ["updated_at", "2017-10-29 11:18:08.401374"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 38], ["body", "Shut him up or shut him down."], ["created_at", "2017-10-29 11:18:08.404224"], ["updated_at", "2017-10-29 11:18:08.404224"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 50], ["body", "Never tell me the odds!"], ["created_at", "2017-10-29 11:18:08.407040"], ["updated_at", "2017-10-29 11:18:08.407040"]]
+  [1m[36m (5.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 49], ["body", "A Jedi uses the Force for knowledge and defense, never for attack."], ["created_at", "2017-10-29 11:18:08.413588"], ["updated_at", "2017-10-29 11:18:08.413588"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 4], ["body", "Strike me down, and I will become more powerful than you could possibly imagine."], ["created_at", "2017-10-29 11:18:08.415377"], ["updated_at", "2017-10-29 11:18:08.415377"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 46], ["body", "Adventure. Excitement. A Jedi craves not these things."], ["created_at", "2017-10-29 11:18:08.417861"], ["updated_at", "2017-10-29 11:18:08.417861"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 50], ["body", "R2-D2, you know better than to trust a strange computer!"], ["created_at", "2017-10-29 11:18:08.420710"], ["updated_at", "2017-10-29 11:18:08.420710"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 39], ["body", "You are unwise to lower your defenses!"], ["created_at", "2017-10-29 11:18:08.422951"], ["updated_at", "2017-10-29 11:18:08.422951"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 9], ["body", "It's not impossible. I used to bullseye womp rats in my T-16 back home, they're not much bigger than two meters."], ["created_at", "2017-10-29 11:18:08.425548"], ["updated_at", "2017-10-29 11:18:08.425548"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 41], ["body", "Bounty hunters! We don't need this scum."], ["created_at", "2017-10-29 11:18:08.428758"], ["updated_at", "2017-10-29 11:18:08.428758"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 3], ["body", "A Jedi uses the Force for knowledge and defense, never for attack."], ["created_at", "2017-10-29 11:18:08.430766"], ["updated_at", "2017-10-29 11:18:08.430766"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 23], ["body", "Aren't you a little short for a Stormtrooper?"], ["created_at", "2017-10-29 11:18:08.433404"], ["updated_at", "2017-10-29 11:18:08.433404"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 14], ["body", "That is why you fail."], ["created_at", "2017-10-29 11:18:08.436127"], ["updated_at", "2017-10-29 11:18:08.436127"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 43], ["body", "It's not impossible. I used to bullseye womp rats in my T-16 back home, they're not much bigger than two meters."], ["created_at", "2017-10-29 11:18:08.438542"], ["updated_at", "2017-10-29 11:18:08.438542"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 18], ["body", "I have a bad feeling about this."], ["created_at", "2017-10-29 11:18:08.441297"], ["updated_at", "2017-10-29 11:18:08.441297"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 47], ["body", "If they follow standard Imperial procedure, they'll dump their garbage before they go to light-speed."], ["created_at", "2017-10-29 11:18:08.444430"], ["updated_at", "2017-10-29 11:18:08.444430"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 43], ["body", "Never tell me the odds!"], ["created_at", "2017-10-29 11:18:08.447076"], ["updated_at", "2017-10-29 11:18:08.447076"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 4], ["body", "No reward is worth this."], ["created_at", "2017-10-29 11:18:08.449692"], ["updated_at", "2017-10-29 11:18:08.449692"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 44], ["body", "If you're saying that coming here was a bad idea, I'm starting to agree with you."], ["created_at", "2017-10-29 11:18:08.452627"], ["updated_at", "2017-10-29 11:18:08.452627"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 50], ["body", "Would somebody get this big walking carpet out of my way?"], ["created_at", "2017-10-29 11:18:08.455372"], ["updated_at", "2017-10-29 11:18:08.455372"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 26], ["body", "Wars not make one great."], ["created_at", "2017-10-29 11:18:08.457268"], ["updated_at", "2017-10-29 11:18:08.457268"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 16], ["body", "No reward is worth this."], ["created_at", "2017-10-29 11:18:08.459782"], ["updated_at", "2017-10-29 11:18:08.459782"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 32], ["body", "It's not impossible. I used to bullseye womp rats in my T-16 back home, they're not much bigger than two meters."], ["created_at", "2017-10-29 11:18:08.464046"], ["updated_at", "2017-10-29 11:18:08.464046"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 16], ["body", "A Jedi uses the Force for knowledge and defense, never for attack."], ["created_at", "2017-10-29 11:18:08.467623"], ["updated_at", "2017-10-29 11:18:08.467623"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 20], ["body", "Strike me down, and I will become more powerful than you could possibly imagine."], ["created_at", "2017-10-29 11:18:08.471806"], ["updated_at", "2017-10-29 11:18:08.471806"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 47], ["body", "Bounty hunters! We don't need this scum."], ["created_at", "2017-10-29 11:18:08.475219"], ["updated_at", "2017-10-29 11:18:08.475219"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 23], ["body", "You are unwise to lower your defenses!"], ["created_at", "2017-10-29 11:18:08.479577"], ["updated_at", "2017-10-29 11:18:08.479577"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 1], ["body", "Aren't you a little short for a Stormtrooper?"], ["created_at", "2017-10-29 11:18:08.483552"], ["updated_at", "2017-10-29 11:18:08.483552"]]
+  [1m[35m (6.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 48], ["body", "It's not impossible. I used to bullseye womp rats in my T-16 back home, they're not much bigger than two meters."], ["created_at", "2017-10-29 11:18:08.492304"], ["updated_at", "2017-10-29 11:18:08.492304"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 13], ["body", "I find your lack of faith disturbing."], ["created_at", "2017-10-29 11:18:08.495123"], ["updated_at", "2017-10-29 11:18:08.495123"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["post_id", 3], ["body", "Now, witness the power of this fully operational battle station."], ["created_at", "2017-10-29 11:18:08.497903"], ["updated_at", "2017-10-29 11:18:08.497903"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("post_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 12], ["body", "Would somebody get this big walking carpet out of my way?"], ["created_at", "2017-10-29 11:18:08.500969"], ["updated_at", "2017-10-29 11:18:08.500969"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "topics"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments"[0m
+
+
+Started GET "/posts" for ::1 at 2017-10-29 12:37:57 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 1770ms (Views: 1751.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/topics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-10-29 12:37:59 +0100
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-29 12:37:59 +0100
+
+
+Started GET "/topics" for ::1 at 2017-10-29 12:38:04 +0100
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.8ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 55ms (Views: 49.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/topics" for ::1 at 2017-10-29 12:46:45 +0100
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.8ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 50ms (Views: 46.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/topics/1" for ::1 at 2017-10-29 12:46:47 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 68ms (Views: 56.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/posts/21" for ::1 at 2017-10-29 12:46:52 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 21]]
+  Rendered posts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new.1" for ::1 at 2017-10-29 12:46:56 +0100
+Processing by PostsController#new as 
+  Rendered posts/new.html.erb within layouts/application (396.0ms)
+Completed 200 OK in 426ms (Views: 425.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2017-10-29 12:47:01 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FKZKkufJH+KsXYhq33Z3B6lpOds1RC76jmwJyH4xd9jWcTxjVQZd2RKikgJMvCeWF59wblPahjKQMihalVQAlg==", "post"=>{"title"=>"new post", "body"=>"this is a post"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "new post"], ["body", "this is a post"], ["created_at", "2017-10-29 11:47:01.912535"], ["updated_at", "2017-10-29 11:47:01.912535"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/51
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/51" for ::1 at 2017-10-29 12:47:01 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 51]]
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/topics/1" for ::1 at 2017-10-29 12:47:10 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new.1" for ::1 at 2017-10-29 12:47:12 +0100
+Processing by PostsController#new as 
+  Rendered posts/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2017-10-29 12:47:18 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ClzYEzF/t8D0LxsQ2RF0DAT/pTGtzv4TO6Hj88u7SW3Ii67ig7D1+0rQAXhK2ySdugnshMtQVtsl/8JhIN4+Iw==", "post"=>{"title"=>"new post!", "body"=>"is a post"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "new post!"], ["body", "is a post"], ["created_at", "2017-10-29 11:47:18.119147"], ["updated_at", "2017-10-29 11:47:18.119147"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/52
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/52" for ::1 at 2017-10-29 12:47:18 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 52]]
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/topics/1" for ::1 at 2017-10-29 12:47:22 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.3ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/37" for ::1 at 2017-10-29 12:47:43 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 37]]
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/topics" for ::1 at 2017-10-29 12:47:49 +0100
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/topics/2" for ::1 at 2017-10-29 12:47:53 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (1.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts/new.2" for ::1 at 2017-10-29 12:47:56 +0100
+Processing by PostsController#new as 
+  Rendered posts/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 40ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2017-10-29 12:48:00 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2V9NNGSaSSmlgLAJ5cBEEq4AU276R94nE8fGKtM5+dEbiDvF1lULEht/qmF2ChSDEPYa25zZdu8Nmee4OFyOnw==", "post"=>{"title"=>"bjk", "body"=>"kjhlk"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "bjk"], ["body", "kjhlk"], ["created_at", "2017-10-29 11:48:00.691753"], ["updated_at", "2017-10-29 11:48:00.691753"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/53
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/posts/53" for ::1 at 2017-10-29 12:48:00 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"53"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 53]]
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for ::1 at 2017-10-29 12:48:10 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/1" for ::1 at 2017-10-29 12:48:15 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/topics" for ::1 at 2017-10-29 12:48:23 +0100
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.3ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/1" for ::1 at 2017-10-29 12:48:25 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for ::1 at 2017-10-29 12:48:34 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/21" for ::1 at 2017-10-29 12:48:36 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 21]]
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/21" for ::1 at 2017-10-30 20:31:41 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 21]]
+  Rendered posts/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 315ms (Views: 290.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics" for ::1 at 2017-10-30 20:31:48 +0100
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/1" for ::1 at 2017-10-30 20:31:49 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 57ms (Views: 54.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/topics/1" for ::1 at 2017-10-30 20:31:52 +0100
+Processing by TopicsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yxvAXcdVBkQz2ErEWhjyB8syGaNpfZgZ1sJp4sHrmUAJzLasdZpEf40nUKzJ0qKWdcRQFg/jMNHInEhwKo7uDg==", "id"=>"1"}
+  [1m[35mTopic Load (0.3ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 21]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 11]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 16]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 21]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 37]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 52]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 37]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "topics" WHERE "topics"."id" = ?  [["id", 1]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 21ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/topics" for ::1 at 2017-10-30 20:31:52 +0100
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/topics/2" for ::1 at 2017-10-30 20:31:54 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new.2" for ::1 at 2017-10-30 20:31:54 +0100
+Processing by PostsController#new as 
+  Rendered posts/new.html.erb within layouts/application (299.2ms)
+Completed 200 OK in 329ms (Views: 328.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2017-10-30 20:31:57 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7d/exYeTY/jKcInLTVIryb4opzlADJ/9S9c5DvJhxXkvCKg0NVwhw3SPk6PemHtYAN7ujCaSNzVViRicGQSyNw==", "post"=>{"title"=>"123", "body"=>"123"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "123"], ["body", "123"], ["created_at", "2017-10-30 19:31:57.958191"], ["updated_at", "2017-10-30 19:31:57.958191"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/54
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/54" for ::1 at 2017-10-30 20:31:57 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 54]]
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/topics" for ::1 at 2017-10-30 20:32:03 +0100
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/topics/2" for ::1 at 2017-10-30 20:32:04 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics" for ::1 at 2017-10-30 20:53:55 +0100
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.3ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-10-30 20:53:55 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-10-30 20:53:55 +0100
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for ::1 at 2017-10-30 20:53:55 +0100
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for ::1 at 2017-10-30 20:53:55 +0100
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-30 20:53:55 +0100
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2017-10-30 20:53:55 +0100
+
+
+Started GET "/assets/topics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-30 20:53:55 +0100
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-10-30 20:53:55 +0100
+
+
+Started GET "/topics/2" for ::1 at 2017-10-30 20:53:57 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 22]]
+  Rendered topics/show.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/topics/2/posts/9" for ::1 at 2017-10-30 20:53:59 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"2", "id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered posts/show.html.erb within layouts/application (16.8ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `edit_post_path' for #<#<Class:0x007f847aaed048>:0x007f84791856a0>
+Did you mean?  edit_topic_path):
+    4: 		<p><%= @post.body %></p>
+    5: 	</div>
+    6: 	<div class="col-md-4">
+    7: 		<%= link_to "Edit", edit_post_path(@post), class: 'btn btn-success' %>
+    8: 		<%= link_to "Delete Post", @post, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this post?'} %>
+    9: 	</div>
+   10: </div>
+  app/views/posts/show.html.erb:7:in `_app_views_posts_show_html_erb___3681549772618529340_70103443601520'
+
+
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.7ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.6ms)
+
+
+Started GET "/topics/2" for ::1 at 2017-10-30 20:58:02 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 22]]
+  Rendered topics/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/2/edit" for ::1 at 2017-10-30 20:58:04 +0100
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTopic Load (0.5ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered topics/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/topics/2" for ::1 at 2017-10-30 20:58:05 +0100
+Processing by TopicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W3jZ6TGkeq1Gm/oiiwW2w8/+gNSw4bxIq46PmYI8ysyZr68Yg2s4lvhk4EoYz+ZScQjJYdZ/FIC10K4LaVm9gg==", "topic"=>{"name"=>"Watto", "description"=>"Officia sit voluptate accusantium animi veniam. Fugit distinctio consequatur aliquam ipsa. Doloremque qui cupiditate aut in impedit aliquam. Eum perspiciatis ea.11", "public"=>"1"}, "commit"=>"Save", "id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "topics" SET "description" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["description", "Officia sit voluptate accusantium animi veniam. Fugit distinctio consequatur aliquam ipsa. Doloremque qui cupiditate aut in impedit aliquam. Eum perspiciatis ea.11"], ["updated_at", "2017-10-30 19:58:05.791733"], ["id", 2]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/topics/2
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/topics/2" for ::1 at 2017-10-30 20:58:05 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 22]]
+  Rendered topics/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics/2/posts/9" for ::1 at 2017-10-30 20:58:07 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"2", "id"=>"9"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics/2/posts/9/edit" for ::1 at 2017-10-30 20:58:08 +0100
+Processing by PostsController#edit as HTML
+  Parameters: {"topic_id"=>"2", "id"=>"9"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/topics/2/posts/9" for ::1 at 2017-10-30 20:58:10 +0100
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"398LVyUHcEMKBA+NBfFma6wHoH1bQaB9xMevrNfMy1gdCH2ml8gyeLT7FeWWOzb6EvHpyD3fCLXamY4+PKm8Fg==", "post"=>{"title"=>"Han Solo", "body"=>"Et ad iure sed molestiae. Quis soluta possimus et. Sit eum placeat qui natus. Laudantium error sit.11"}, "commit"=>"Save", "topic_id"=>"2", "id"=>"9"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "posts" SET "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["body", "Et ad iure sed molestiae. Quis soluta possimus et. Sit eum placeat qui natus. Laudantium error sit.11"], ["updated_at", "2017-10-30 19:58:10.326170"], ["id", 9]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 2]]
+Redirected to http://localhost:3000/topics/2/posts/9
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/topics/2/posts/9" for ::1 at 2017-10-30 20:58:10 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"2", "id"=>"9"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/2/posts/9" for ::1 at 2017-10-30 20:58:45 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"2", "id"=>"9"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/topics/2/posts/9" for ::1 at 2017-10-30 20:58:46 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"2", "id"=>"9"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/topics/2/posts/9" for ::1 at 2017-10-30 20:58:47 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"2", "id"=>"9"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-10-30 20:58:48 +0100
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-30 20:58:49 +0100
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 30ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-30 20:59:05 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 248ms (Views: 238.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-30 20:59:06 +0100
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 36ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics" for ::1 at 2017-10-30 20:59:21 +0100
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.9ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 39ms (Views: 32.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/topics/4" for ::1 at 2017-10-30 20:59:23 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 20]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 23]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 25]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 28]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 39]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 46]]
+  Rendered topics/show.html.erb within layouts/application (302.3ms)
+Completed 200 OK in 331ms (Views: 322.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/topics/4/posts/new" for ::1 at 2017-10-30 20:59:27 +0100
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"4"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/topics/4/posts" for ::1 at 2017-10-30 20:59:29 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S0k0AmF0viyQtSqMBdR2SoPVFRuRr28rEKFHuDXIALCJnkLz07v8Fy5KMOSWHibbPSNcrvcxx+MO/2Yq3q13/g==", "post"=>{"title"=>"123", "body"=>"123"}, "commit"=>"Save", "topic_id"=>"4"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "123"], ["body", "123"], ["topic_id", 4], ["created_at", "2017-10-30 19:59:29.673322"], ["updated_at", "2017-10-30 19:59:29.673322"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/topics/4/posts/55
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/topics/4/posts/55" for ::1 at 2017-10-30 20:59:29 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"4", "id"=>"55"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 55]]
+  [1m[35mTopic Load (0.4ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/4/" for ::1 at 2017-10-30 20:59:33 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 20]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 23]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 25]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 28]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 39]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 46]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 55]]
+  Rendered topics/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/topics/4/" for ::1 at 2017-10-30 20:59:44 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 20]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 23]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 25]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 28]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 39]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 46]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 55]]
+  Rendered topics/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/topics/4/" for ::1 at 2017-10-30 20:59:54 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 20]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 23]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 25]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 28]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 39]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 46]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 55]]
+  Rendered topics/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/topics/4/" for ::1 at 2017-10-30 21:00:03 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 20]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 23]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 25]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 28]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 39]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 46]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 55]]
+  Rendered topics/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/topics/4/" for ::1 at 2017-10-30 21:00:16 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 20]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 23]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 25]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 28]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 39]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 46]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 55]]
+  Rendered topics/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics" for ::1 at 2017-10-30 21:00:17 +0100
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/topics/new" for ::1 at 2017-10-30 21:00:21 +0100
+Processing by TopicsController#new as HTML
+  Rendered topics/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/topics" for ::1 at 2017-10-30 21:00:24 +0100
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5XZvcOPgr68kjLLrvXU/rpeRubv92cFWQzdSE0fp68QnoRmBUS/tlJpzqIMuv28/KWfwDptHaZ5daXOBrIycig==", "topic"=>{"name"=>"33", "description"=>"33", "public"=>"1"}, "commit"=>"Save"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "33"], ["description", "33"], ["created_at", "2017-10-30 20:00:24.494145"], ["updated_at", "2017-10-30 20:00:24.494145"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/topics/16
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/topics/16" for ::1 at 2017-10-30 21:00:24 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 16]]
+  Rendered topics/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/topics" for ::1 at 2017-10-30 21:00:28 +0100
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s2Fq+4a88gGzxE291Wm35ct84Sg9HtGRHRH9MOKfCO9xthwKNHOwOg07V9VGo+d0dYqonVuAeVkDT9yiCfp/oQ==", "topic"=>{"name"=>"33", "description"=>"33", "public"=>"0"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("name", "description", "public", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "33"], ["description", "33"], ["public", "f"], ["created_at", "2017-10-30 20:00:28.168325"], ["updated_at", "2017-10-30 20:00:28.168325"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics/17
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/topics/17" for ::1 at 2017-10-30 21:00:28 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 17]]
+  Rendered topics/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/topics" for ::1 at 2017-10-30 21:00:29 +0100
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/topics/16" for ::1 at 2017-10-30 21:00:31 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 16]]
+  Rendered topics/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/topics/16/posts/new" for ::1 at 2017-10-30 21:00:33 +0100
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"16"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered posts/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/topics/16/posts" for ::1 at 2017-10-30 21:00:36 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0CW30H7uY5jk6hCbNUYel5mH0K8AnDgZ79ZnN0eFnrgS8sEhzCEho1oVCvOmjE4GJ3GZGmYCkNHxiEalrODp9g==", "post"=>{"title"=>"22", "body"=>"33"}, "commit"=>"Save", "topic_id"=>"16"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "body", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "22"], ["body", "33"], ["topic_id", 16], ["created_at", "2017-10-30 20:00:36.611590"], ["updated_at", "2017-10-30 20:00:36.611590"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics/16/posts/56
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/topics/16/posts/56" for ::1 at 2017-10-30 21:00:36 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"16", "id"=>"56"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 56]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/topics/16" for ::1 at 2017-10-30 21:00:40 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 16]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 56]]
+  Rendered topics/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/topics/16/posts/56" for ::1 at 2017-10-30 21:00:42 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"16", "id"=>"56"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/topics/16/posts/56" for ::1 at 2017-10-30 21:00:44 +0100
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rcicIK9zCuSWjti+8LkKMPvT/9I0Si2RlJm5cG1uFONvH+rRHbxI3yhxwtZjc1qhRSW2Z1LUhVmKx5jihgtjrQ==", "topic_id"=>"16", "id"=>"56"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 56]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 56]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 56]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 16]]
+Redirected to http://localhost:3000/topics/16
+Completed 302 Found in 7ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/topics/16" for ::1 at 2017-10-30 21:00:44 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 16]]
+  Rendered topics/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/topics/16" for ::1 at 2017-10-30 21:00:47 +0100
+Processing by TopicsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gt6J2DjRQuyRj+s6SYAeLfBfIOr5M0E0fVlTpjwUFn1ACf8pih4A1y9w8VLaSk68TqlpX5+t6fxjB3I013FhMw==", "id"=>"16"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 16]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "topics" WHERE "topics"."id" = ?  [["id", 16]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 6ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/topics" for ::1 at 2017-10-30 21:00:47 +0100
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/topics/17" for ::1 at 2017-10-30 21:00:49 +0100
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 17]]
+  Rendered topics/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.3ms)
