@@ -3049,3 +3049,206 @@ Migrating to CreateUsers (20171104082406)
             FROM sqlite_temp_master
             WHERE name='index_posts_on_topic_id' AND type='index'
 
+
+
+Started GET "/" for ::1 at 2017-11-04 13:16:02 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered welcome/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 376ms (Views: 368.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-11-04 13:16:02 +0100
+
+
+Started GET "/" for ::1 at 2017-11-04 13:16:03 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-11-04 13:16:12 +0100
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-11-04 13:16:12 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 22.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-11-04 13:16:12 +0100
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 22.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-11-04 13:16:13 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 28ms (Views: 28.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-11-04 13:16:14 +0100
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/topics" for ::1 at 2017-11-04 13:16:14 +0100
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.6ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 36ms (Views: 28.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/about" for ::1 at 2017-11-04 13:16:14 +0100
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 28ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics" for ::1 at 2017-11-04 13:16:15 +0100
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-11-04 13:16:15 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 26ms (Views: 25.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-11-04 13:16:22 +0100
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-11-04 13:16:26 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-11-04 13:16:50 +0100
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 24.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-11-04 13:17:44 +0100
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 54ms (Views: 53.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2017-11-04 13:17:46 +0100
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (792.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 876ms (Views: 868.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sessions/new" for ::1 at 2017-11-04 13:17:48 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"} missing required keys: [:id]):
+    2: 
+    3: <div class="row">
+    4:   <div class="col-md-8">
+    5:     <%= form_for :session, url: session_path do |f| %>
+    6:       <div class="form-group">
+    7:         <%= f.label :email %>
+    8:         <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: "Enter email" %>
+  app/views/sessions/new.html.erb:5:in `_app_views_sessions_new_html_erb___1095646068130462398_70188124483280'
+
+
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (88.9ms)
+
+
+Started GET "/sessions/new" for ::1 at 2017-11-04 13:18:46 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"} missing required keys: [:id]):
+    2: 
+    3: <div class="row">
+    4:   <div class="col-md-8">
+    5:     <%= form_for :session, url: session_path do |f| %>
+    6:       <div class="form-group">
+    7:         <%= f.label :email %>
+    8:         <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: "Enter email" %>
+  app/views/sessions/new.html.erb:5:in `_app_views_sessions_new_html_erb___1095646068130462398_70188124483280'
+
+
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.8ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/bentzen/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.6ms)
+
+
+Started GET "/sessions/new" for ::1 at 2017-11-04 13:19:14 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 2644ms (Views: 2642.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/sessions.self-3373f018d2f2cb43429bf0d72e21af134964083603486405c7d459ce8ba71ffe.css?body=1" for ::1 at 2017-11-04 13:19:17 +0100
+
+
+Started GET "/sessions/new" for ::1 at 2017-11-04 13:19:41 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 2612ms (Views: 2611.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-a17b97fb633b8086ff62bd72e7a823e18e8b30bfd2586cba0ce3aad7e4cd3a59.css?body=1" for ::1 at 2017-11-04 13:19:43 +0100
+
+
+Started GET "/sessions/new" for ::1 at 2017-11-04 13:19:44 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 77ms (Views: 76.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for ::1 at 2017-11-04 13:20:24 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 2569ms (Views: 2568.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for ::1 at 2017-11-04 13:21:02 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 2607ms (Views: 2606.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/sessions.self-c6b3110c2eac14b5fba7e05374fed4d531777672a2a14f04005513200235253a.css?body=1" for ::1 at 2017-11-04 13:21:04 +0100
