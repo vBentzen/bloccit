@@ -4457,3 +4457,575 @@ Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
   [1m[35m (0.0ms)[0m  begin transaction
   [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1[0m
   [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Darth Sidious"], ["description", "Magnam hic et aut natus nihil. Qui excepturi eligendi maxime consequatur aliquam dolorem. Aperiam dolorem enim."], ["created_at", "2017-11-04 08:48:16.209842"], ["updated_at", "2017-11-04 08:48:16.209842"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"1"}
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/new.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 27ms (Views: 15.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Darth Maul"], ["description", "Qui quod quia rerum reprehenderit quis sit atque. Non ut laborum. Officia quasi harum assumenda sed quo id culpa."], ["created_at", "2017-11-04 08:48:16.246596"], ["updated_at", "2017-11-04 08:48:16.246596"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"1"}
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/new.html.erb within layouts/application (0.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Nute Gunray"], ["description", "Unde et repellendus perspiciatis mollitia. Numquam nulla quia eius aut ea. Aperiam velit architecto maiores tempora ipsa. Et fugiat ipsum deleniti enim aliquam exercitationem delectus. Voluptatem aut iure omnis vel similique dignissimos."], ["created_at", "2017-11-04 08:48:16.251600"], ["updated_at", "2017-11-04 08:48:16.251600"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#new as HTML
+  Parameters: {"topic_id"=>"1"}
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/new.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ki-Adi-Mundi"], ["description", "Quis repellat reiciendis placeat nulla ut laudantium. Minus qui recusandae eaque ea tempora mollitia aliquid. Velit quae earum. Et odio magni est beatae sint exercitationem."], ["created_at", "2017-11-04 08:48:16.259455"], ["updated_at", "2017-11-04 08:48:16.259455"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Ben Solo", "body"=>"Nobis velit qui. Qui aut porro consequatur officiis. Quis nobis excepturi. Qui enim facere quo. Nemo sunt aliquid cum dolorum harum voluptates."}, "topic_id"=>"1"}
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Ben Solo"], ["body", "Nobis velit qui. Qui aut porro consequatur officiis. Quis nobis excepturi. Qui enim facere quo. Nemo sunt aliquid cum dolorum harum voluptates."], ["topic_id", 1], ["created_at", "2017-11-04 08:48:16.268032"], ["updated_at", "2017-11-04 08:48:16.268032"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/topics/1/posts/1
+Completed 302 Found in 10ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Darth Maul"], ["description", "Animi aperiam est. Enim cum quibusdam. Ratione ut et nisi beatae corporis consequatur. Odit facilis eos. Totam ipsum dolor non dolores."], ["created_at", "2017-11-04 08:48:16.273313"], ["updated_at", "2017-11-04 08:48:16.273313"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Mace Windu", "body"=>"Quas odio rem. Occaecati error exercitationem iste aut. Dolorum nesciunt sed quia qui vitae nam. Et ducimus maiores quaerat nihil."}, "topic_id"=>"1"}
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Mace Windu"], ["body", "Quas odio rem. Occaecati error exercitationem iste aut. Dolorum nesciunt sed quia qui vitae nam. Et ducimus maiores quaerat nihil."], ["topic_id", 1], ["created_at", "2017-11-04 08:48:16.275936"], ["updated_at", "2017-11-04 08:48:16.275936"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/topics/1/posts/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  ORDER BY "posts"."id" DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bail Organa"], ["description", "Voluptate quia natus. Maxime dicta eius. Et dolor qui et. In veritatis laborum doloremque qui. Velit architecto nihil consectetur atque totam sed."], ["created_at", "2017-11-04 08:48:16.280093"], ["updated_at", "2017-11-04 08:48:16.280093"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Anakin Skywalker", "body"=>"Earum sequi excepturi doloremque qui soluta mollitia eligendi. Voluptate est id et itaque praesentium. Aspernatur eligendi ab."}, "topic_id"=>"1"}
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Anakin Skywalker"], ["body", "Earum sequi excepturi doloremque qui soluta mollitia eligendi. Voluptate est id et itaque praesentium. Aspernatur eligendi ab."], ["topic_id", 1], ["created_at", "2017-11-04 08:48:16.282843"], ["updated_at", "2017-11-04 08:48:16.282843"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/topics/1/posts/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts"  ORDER BY "posts"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sebulba"], ["description", "Ab qui sit natus et rerum officia. Perspiciatis ut atque harum aut. Inventore architecto enim animi aut unde mollitia sed. Et ipsam debitis at eligendi laborum. Inventore doloremque aliquid ea eius."], ["created_at", "2017-11-04 08:48:16.286732"], ["updated_at", "2017-11-04 08:48:16.286732"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Bail Organa"], ["body", "In fugit exercitationem odio ratione. Doloremque eum odio aliquam. Perferendis nam libero ut et sint. Tenetur dolor beatae fugit dolores ad. Doloremque optio voluptates quidem aperiam molestiae ut velit."], ["topic_id", 1], ["created_at", "2017-11-04 08:48:16.296391"], ["updated_at", "2017-11-04 08:48:16.296391"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Sheev Palpatine"], ["description", "Maiores voluptatem delectus. Mollitia id illo adipisci magni ipsa quo. Animi iusto dolorem quia similique debitis laudantium. Labore non voluptatem iste et sunt. Qui eum veritatis aliquam."], ["created_at", "2017-11-04 08:48:16.303717"], ["updated_at", "2017-11-04 08:48:16.303717"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Mace Windu"], ["body", "Qui laudantium optio doloribus rerum. Maxime ratione magnam. Quod consequatur itaque et at placeat aut. Ut in quidem assumenda repellat modi."], ["topic_id", 1], ["created_at", "2017-11-04 08:48:16.305660"], ["updated_at", "2017-11-04 08:48:16.305660"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Luke Skywalker"], ["description", "Quam velit sed blanditiis qui quia eum nesciunt. Inventore aut qui. Velit sit quasi qui ut maxime quia eos."], ["created_at", "2017-11-04 08:48:16.309809"], ["updated_at", "2017-11-04 08:48:16.309809"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Padme Amidala"], ["body", "Sit corrupti aut perferendis et repellendus. Aut delectus tempora qui eos. Officiis velit ducimus aut. Porro earum possimus."], ["topic_id", 1], ["created_at", "2017-11-04 08:48:16.311420"], ["updated_at", "2017-11-04 08:48:16.311420"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#show as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Darth Maul"], ["description", "Excepturi animi expedita harum debitis. Et consectetur molestiae. Quidem sint eaque."], ["created_at", "2017-11-04 08:48:16.316132"], ["updated_at", "2017-11-04 08:48:16.316132"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Darth Maul"], ["body", "Consequatur vero est ipsum possimus. Magni suscipit deleniti veritatis ut. Dolorem quis laboriosam perspiciatis et molestias omnis."], ["topic_id", 1], ["created_at", "2017-11-04 08:48:16.317775"], ["updated_at", "2017-11-04 08:48:16.317775"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#edit as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Anakin Skywalker"], ["description", "Fugit distinctio aut. Ipsum dolorem esse aperiam eos et. Voluptatem quo et eius qui nihil ad. Tenetur voluptas dolores est voluptas. Fuga vitae recusandae perspiciatis iure totam voluptates velit."], ["created_at", "2017-11-04 08:48:16.323429"], ["updated_at", "2017-11-04 08:48:16.323429"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Bail Organa"], ["body", "Nemo dolor ullam non reiciendis. Delectus quam fugiat id quo. Et sint dolorem aut ut amet. Nulla sunt aut placeat earum. Est et sint consequuntur fuga vitae."], ["topic_id", 1], ["created_at", "2017-11-04 08:48:16.325563"], ["updated_at", "2017-11-04 08:48:16.325563"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#edit as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Mace Windu"], ["description", "Voluptas dicta beatae. Laboriosam culpa hic officiis odit maxime. Doloremque nihil nesciunt laboriosam quo. Doloremque harum accusantium."], ["created_at", "2017-11-04 08:48:16.329600"], ["updated_at", "2017-11-04 08:48:16.329600"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lando Calrissian"], ["description", "Rem aut voluptatem dolorem soluta. Nihil dolorem impedit. Dolores ad magnam mollitia. Eveniet laudantium ab laborum illo consectetur iste."], ["created_at", "2017-11-04 08:48:16.334986"], ["updated_at", "2017-11-04 08:48:16.334986"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Ben Solo"], ["body", "Voluptatem corrupti itaque. Deserunt ut maiores eius facere et earum est. Aut et minus ab. Ut adipisci facilis debitis voluptas officiis."], ["topic_id", 1], ["created_at", "2017-11-04 08:48:16.336619"], ["updated_at", "2017-11-04 08:48:16.336619"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"title"=>"Darth Vader", "body"=>"A rerum nisi aut deserunt. Excepturi repudiandae recusandae. Ut et natus facere a est vel. Libero voluptatem natus illo voluptas dolore aperiam non."}, "topic_id"=>"1", "id"=>"1"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "posts" SET "title" = ?, "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "Darth Vader"], ["body", "A rerum nisi aut deserunt. Excepturi repudiandae recusandae. Ut et natus facere a est vel. Libero voluptatem natus illo voluptas dolore aperiam non."], ["updated_at", "2017-11-04 08:48:16.339433"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/topics/1/posts/1
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Jango Fett"], ["description", "Odit sed nihil quidem quam aliquam. Esse non dolores molestiae maiores eius. Quasi ab placeat voluptas ipsum nam et. Atque consequatur officia libero cumque."], ["created_at", "2017-11-04 08:48:16.343029"], ["updated_at", "2017-11-04 08:48:16.343029"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Ki-Adi-Mundi"], ["body", "Atque reprehenderit eum voluptas. Libero iste doloribus placeat. Dicta quod excepturi unde."], ["topic_id", 1], ["created_at", "2017-11-04 08:48:16.344708"], ["updated_at", "2017-11-04 08:48:16.344708"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"title"=>"Jabba the Hutt", "body"=>"Reiciendis impedit deserunt vel debitis. Consequatur facere sit rerum labore. Voluptatem assumenda ad dolor. Accusantium error nihil quis minus dolorem distinctio temporibus."}, "topic_id"=>"1", "id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "posts" SET "title" = ?, "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["title", "Jabba the Hutt"], ["body", "Reiciendis impedit deserunt vel debitis. Consequatur facere sit rerum labore. Voluptatem assumenda ad dolor. Accusantium error nihil quis minus dolorem distinctio temporibus."], ["updated_at", "2017-11-04 08:48:16.346971"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/topics/1/posts/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Luke Skywalker"], ["description", "Molestias et culpa. Voluptatum officia ut sequi. Pariatur cupiditate suscipit sint in iusto."], ["created_at", "2017-11-04 08:48:16.350840"], ["updated_at", "2017-11-04 08:48:16.350840"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Poe Dameron"], ["body", "Tenetur recusandae optio. Nobis molestiae labore quod debitis exercitationem quisquam. Dolor reiciendis asperiores facere minima officia provident similique."], ["topic_id", 1], ["created_at", "2017-11-04 08:48:16.352887"], ["updated_at", "2017-11-04 08:48:16.352887"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#destroy as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to http://test.host/topics/1
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Poe Dameron"], ["description", "Qui officiis officia sed molestiae eos quidem non. Laudantium saepe commodi. Saepe molestiae nihil non quasi magni expedita. Enim ex eos dolore quidem sequi reprehenderit rerum. Ex sed accusantium inventore consequuntur."], ["created_at", "2017-11-04 08:48:16.366874"], ["updated_at", "2017-11-04 08:48:16.366874"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Chewbacca"], ["body", "Aut nihil qui nostrum. Laboriosam eum molestiae eos laborum minima. Voluptas alias quia et aut est. Provident magnam et aut. Nam voluptas aperiam exercitationem laudantium ducimus sequi rerum."], ["topic_id", 1], ["created_at", "2017-11-04 08:48:16.369264"], ["updated_at", "2017-11-04 08:48:16.369264"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#destroy as HTML
+  Parameters: {"topic_id"=>"1", "id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://test.host/topics/1
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by TopicsController#index as HTML
+  Rendered topics/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by TopicsController#index as HTML
+  Rendered topics/index.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Ki-Adi-Mundi"], ["description", "Suscipit commodi id temporibus quo dolor veniam. Molestiae impedit quia dolorem necessitatibus sint non. Amet at consectetur omnis sequi explicabo eum. Qui asperiores doloremque omnis sed dolores sed sit. Consequatur illum placeat similique ut fugiat."], ["created_at", "2017-11-04 08:48:16.384422"], ["updated_at", "2017-11-04 08:48:16.384422"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mTopic Load (0.1ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Lando Calrissian"], ["description", "Alias reiciendis sit labore tempore magni. Placeat voluptas magnam autem ad sed quae debitis. Neque accusamus et."], ["created_at", "2017-11-04 08:48:16.387774"], ["updated_at", "2017-11-04 08:48:16.387774"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered topics/show.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Kylo Ren"], ["description", "Quia iure consequatur sunt. Et magnam atque est. Dolorum aut aliquam neque. Quasi quia ullam. Corrupti nobis eos consequatur accusamus sit nostrum."], ["created_at", "2017-11-04 08:48:16.394119"], ["updated_at", "2017-11-04 08:48:16.394119"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered topics/show.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Wedge Antilles"], ["description", "Aut quia nesciunt alias similique a ducimus fuga. Rerum soluta illum natus ut quas. Dolor repellendus unde aut pariatur a quisquam. Commodi distinctio voluptatem. Dicta et minus."], ["created_at", "2017-11-04 08:48:16.398674"], ["updated_at", "2017-11-04 08:48:16.398674"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered topics/show.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by TopicsController#new as HTML
+  Rendered topics/new.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 2ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by TopicsController#new as HTML
+  Rendered topics/new.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by TopicsController#new as HTML
+  Rendered topics/new.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 0ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "topics"[0m
+Processing by TopicsController#create as HTML
+  Parameters: {"topic"=>{"name"=>"Lando Calrissian", "description"=>"Sit voluptas quisquam. Harum animi est. Totam autem eius aliquid rerum id ipsa. Voluptas et amet similique ipsam. Tempora minima nostrum quidem omnis."}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "public", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Lando Calrissian"], ["description", "Sit voluptas quisquam. Harum animi est. Totam autem eius aliquid rerum id ipsa. Voluptas et amet similique ipsam. Tempora minima nostrum quidem omnis."], ["public", nil], ["created_at", "2017-11-04 08:48:16.411774"], ["updated_at", "2017-11-04 08:48:16.411774"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/topics/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by TopicsController#create as HTML
+  Parameters: {"topic"=>{"name"=>"Mace Windu", "description"=>"Delectus voluptates eos porro est nulla. Alias fugiat tempora dignissimos enim aut maiores perferendis. Enim eaque possimus quia explicabo ea."}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "public", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Mace Windu"], ["description", "Delectus voluptates eos porro est nulla. Alias fugiat tempora dignissimos enim aut maiores perferendis. Enim eaque possimus quia explicabo ea."], ["public", nil], ["created_at", "2017-11-04 08:48:16.416232"], ["updated_at", "2017-11-04 08:48:16.416232"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/topics/1
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY "topics"."id" DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by TopicsController#create as HTML
+  Parameters: {"topic"=>{"name"=>"Darth Caedus", "description"=>"Temporibus rerum est veritatis aperiam pariatur unde voluptate. Provident quia facere exercitationem ut. Architecto repellat reiciendis."}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "public", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Darth Caedus"], ["description", "Temporibus rerum est veritatis aperiam pariatur unde voluptate. Provident quia facere exercitationem ut. Architecto repellat reiciendis."], ["public", nil], ["created_at", "2017-11-04 08:48:16.420702"], ["updated_at", "2017-11-04 08:48:16.420702"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/topics/1
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY "topics"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jango Fett"], ["description", "Perspiciatis tenetur doloribus. Est delectus aut itaque. Labore ex eveniet est autem repellendus consequuntur. Fuga rerum eum earum eaque reprehenderit animi porro."], ["created_at", "2017-11-04 08:48:16.424366"], ["updated_at", "2017-11-04 08:48:16.424366"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered topics/edit.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Count Dooku"], ["description", "Similique quibusdam nihil voluptatum voluptas. Quaerat ullam maiores eos nihil aliquid. Accusantium vel repellat sequi id quibusdam magni. Ex quis asperiores voluptas explicabo temporibus quasi. Impedit ut id minus suscipit."], ["created_at", "2017-11-04 08:48:16.431137"], ["updated_at", "2017-11-04 08:48:16.431137"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered topics/edit.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Borvo the Hutt"], ["description", "Ut et rerum sed ipsa. Rerum nihil voluptatem doloribus qui quibusdam. Odit consequatur ad. In tempora necessitatibus et. Ab dolor repellendus possimus quo nostrum porro non."], ["created_at", "2017-11-04 08:48:16.436541"], ["updated_at", "2017-11-04 08:48:16.436541"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered topics/edit.html.erb within layouts/application (0.0ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Darth Caedus"], ["description", "Et assumenda dolores quo odio veniam. Et nihil alias. Laborum et tenetur. Autem molestiae et possimus labore voluptates dolorem."], ["created_at", "2017-11-04 08:48:16.441270"], ["updated_at", "2017-11-04 08:48:16.441270"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by TopicsController#update as HTML
+  Parameters: {"topic"=>{"name"=>"Obi-Wan Kenobi", "description"=>"Excepturi ut quas. Harum quia reiciendis numquam provident maiores. Fugit in sit eveniet. Laborum incidunt ipsum."}, "id"=>"1"}
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "topics" SET "name" = ?, "description" = ?, "public" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["name", "Obi-Wan Kenobi"], ["description", "Excepturi ut quas. Harum quia reiciendis numquam provident maiores. Fugit in sit eveniet. Laborum incidunt ipsum."], ["public", nil], ["updated_at", "2017-11-04 08:48:16.443512"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/topics/1
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Han Solo"], ["description", "Sapiente et quasi officia voluptatem eveniet atque sint. Voluptatem necessitatibus consequatur ut quia aspernatur. Qui aliquid nam sunt officiis."], ["created_at", "2017-11-04 08:48:16.446189"], ["updated_at", "2017-11-04 08:48:16.446189"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by TopicsController#update as HTML
+  Parameters: {"topic"=>{"name"=>"Watto", "description"=>"Eum nostrum facilis commodi quasi repellendus iste. Ipsa distinctio quos. Deleniti dignissimos quasi. Est harum et suscipit id est. Doloribus possimus nam iusto."}, "id"=>"1"}
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "topics" SET "name" = ?, "description" = ?, "public" = ?, "updated_at" = ? WHERE "topics"."id" = ?  [["name", "Watto"], ["description", "Eum nostrum facilis commodi quasi repellendus iste. Ipsa distinctio quos. Deleniti dignissimos quasi. Est harum et suscipit id est. Doloribus possimus nam iusto."], ["public", nil], ["updated_at", "2017-11-04 08:48:16.448303"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/topics/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jango Fett"], ["description", "Corrupti cupiditate rerum ipsum ea maiores. Aliquid ratione reprehenderit sed. Aut vel tempore voluptatum ea veritatis. Qui veritatis sit ea sapiente. Eos voluptates est molestias velit consequatur vel nisi."], ["created_at", "2017-11-04 08:48:16.452205"], ["updated_at", "2017-11-04 08:48:16.452205"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by TopicsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.0ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "topics" WHERE "topics"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/topics
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Boba Fett"], ["description", "Deserunt praesentium quam sit et velit. Officia sequi saepe vel et velit. Magnam alias voluptatem distinctio tempora non laboriosam."], ["created_at", "2017-11-04 08:48:16.457689"], ["updated_at", "2017-11-04 08:48:16.457689"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by TopicsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTopic Load (0.0ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "topics" WHERE "topics"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/topics
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Bail Organa"], ["description", "Magni dolores aut. At vel quis quaerat eos. Velit veritatis praesentium deleniti."], ["created_at", "2017-11-04 08:48:16.475888"], ["updated_at", "2017-11-04 08:48:16.475888"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "body", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Lando Calrissian"], ["body", "Accusamus esse nobis consequatur aut. Et hic aut accusamus nesciunt sunt nihil. Ut sit reprehenderit soluta itaque est."], ["topic_id", 1], ["created_at", "2017-11-04 08:48:16.477607"], ["updated_at", "2017-11-04 08:48:16.477607"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["body", "Comment Body"], ["post_id", 1], ["created_at", "2017-11-04 08:48:16.480484"], ["updated_at", "2017-11-04 08:48:16.480484"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nute Gunray"], ["description", "Sunt dolor ex quo. Voluptates praesentium explicabo sunt. Laborum asperiores reiciendis quo autem odio pariatur. Suscipit magni dolorum labore ea quia qui. Et quod labore et."], ["created_at", "2017-11-04 08:48:16.503941"], ["updated_at", "2017-11-04 08:48:16.503941"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "body", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Kylo Ren"], ["body", "Quis est quasi ea modi. Similique eius quasi aut quae. Ut est consequatur. Tenetur praesentium totam ex rem aut id."], ["topic_id", 1], ["created_at", "2017-11-04 08:48:16.505691"], ["updated_at", "2017-11-04 08:48:16.505691"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Boba Fett"], ["description", "Fuga explicabo enim illum doloribus quibusdam nesciunt dolores. Excepturi voluptates rerum et voluptas. Nesciunt magnam suscipit iure dolorum earum qui. Assumenda tempore provident necessitatibus."], ["created_at", "2017-11-04 08:48:16.509406"], ["updated_at", "2017-11-04 08:48:16.509406"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "topics" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Ben Solo"], ["description", "Ut aut nemo quas illo explicabo architecto. Iusto reiciendis placeat neque provident asperiores sint. Ut expedita nisi quisquam qui. Quia impedit adipisci voluptas. Ab et autem."], ["created_at", "2017-11-04 08:48:16.512008"], ["updated_at", "2017-11-04 08:48:16.512008"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('xx') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('xxx') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "a"], ["password_digest", "$2a$04$i3sg.453hJ9KyNGt0qu62O2BhOBI6ChmFE4tjSwarfsWFyWT0HDTy"], ["created_at", "2017-11-04 08:48:16.552277"], ["updated_at", "2017-11-04 08:48:16.552277"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('a') LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$vHvmNvVDTzON1yYV70n53uLgCA5Ad18rdHTJuO7qPYPkt4nMqPuGK"], ["created_at", "2017-11-04 08:48:16.582813"], ["updated_at", "2017-11-04 08:48:16.582813"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$niLjPvdFwsOvHQz315wGJenNoy24QAuC1proX5ve3cto43RF827rS"], ["created_at", "2017-11-04 09:00:50.441412"], ["updated_at", "2017-11-04 09:00:50.441412"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$sh93TjtmWVSr4RwLkGbDv.QcQrkhShn2OPPZzpdhRJo4uaQGT8QDW"], ["created_at", "2017-11-04 09:00:50.450022"], ["updated_at", "2017-11-04 09:00:50.450022"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$.oVUcTh5/mtdH1u0WzYa3OkfV7nZPEmidOOCcbDcaRzh8115f5lUm"], ["created_at", "2017-11-04 09:01:14.514986"], ["updated_at", "2017-11-04 09:01:14.514986"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$cEmqSnjafbl7GuscxCrvauPxCbBRUDPBvMGo.98MIFjTSpW6y67IW"], ["created_at", "2017-11-04 09:01:14.523189"], ["updated_at", "2017-11-04 09:01:14.523189"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('user@bloccit.com') AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["name", "Bloc User"], ["updated_at", "2017-11-04 09:01:14.525142"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$9Op5jvEHtlBQlDGv2Ber9OaBgGyFK1o7uFILpiCrVOewd911ChifS"], ["created_at", "2017-11-04 09:01:25.906202"], ["updated_at", "2017-11-04 09:01:25.906202"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@bloccit.com') LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bloccit User"], ["email", "user@bloccit.com"], ["password_digest", "$2a$04$0nvJ1dtV8/NnwpS2atfpuumcmch6rJV9Hii1FAHcaIvAco3ku5X8q"], ["created_at", "2017-11-04 09:01:25.912800"], ["updated_at", "2017-11-04 09:01:25.912800"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('user@bloccit.com') AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
