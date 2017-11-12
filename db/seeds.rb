@@ -1,8 +1,8 @@
 # Create Users
 5.times do
   User.create!(
-  	name: Faker::LordOfTheRings.character,
-  	email: Faker::Internet.email,
+  	name: 		Faker::LordOfTheRings.character,
+  	email: 		Faker::Internet.email,
   	password: Faker::Lorem.sentence
   )
 end
@@ -20,10 +20,10 @@ topics = Topic.all
 # Create Posts
 50.times do
 	Post.create!(
-    user: users.sample,
+    user: 	users.sample,
 		topic:  topics.sample,
-		title: Faker::StarWars.character,
-		body:  Faker::Lorem.paragraph
+		title: 	Faker::StarWars.character,
+		body:  	Faker::Lorem.paragraph
 	)
 end
 posts = Post.all
@@ -31,24 +31,25 @@ posts = Post.all
 # Create Comments
 100.times do
 	Comment.create!(
+    user: users.sample,
 		post: posts.sample,
-		body: Faker::StarWars.quote
+  	body: Faker::StarWars.quote
 	)
 end
 
 # Create an admin user
 admin = User.create!(
-                name: 		'Admin User',
-                email: 		'admin@example.com',
-                password: 'helloworld',
-                role: 		'admin'
+	name: 		'Admin User',
+  email: 		'admin@example.com',
+  password: 'helloworld',
+  role: 		'admin'
 )
 
 # Create a member
 member = User.create!(
-                 name: 		 'Member user',
-                 email: 	 'member@example.com',
-                 password: 'helloworld'
+	name: 		'Member user',
+  email: 	  'member@example.com',
+  password: 'helloworld'
 )
 
 puts "Seed finished"
