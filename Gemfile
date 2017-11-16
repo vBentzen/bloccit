@@ -37,4 +37,5 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Use bcrypt for encrypting User passwords
 gem 'bcrypt'
-
+# Use Figaro to store sensitive info( passwords etc )
+gem 'figaro', '1.0'
