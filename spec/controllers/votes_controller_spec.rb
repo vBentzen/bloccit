@@ -2,10 +2,10 @@ require 'rails_helper'
 include SessionsHelper
 
 RSpec.describe VotesController, type: :controller do
-  let(:my_user) { User.create!(name: "Bloccit User", email: "user@bloccit.com", password: "helloworld") }
-  let(:other_user) { User.create!(name: Faker::StarWars.character, email: Faker::Internet.email, password: "helloworld", role: :member) }
-  let(:my_topic) { Topic.create!(name:  Faker::StarWars.character, description: Faker::Lorem.paragraph) }
-  let(:user_post) { my_topic.posts.create!(title: Faker::StarWars.character, body: Faker::Lorem.paragraph, user: other_user) }
+  let(:my_topic) { create(:topic) }
+  let(:my_user) { create(:user) }
+  let(:other_user) { create(:user) }
+  let(:user_post) { create(:post, topic: my_topic, user: other_user) }
   let(:my_vote) { Vote.create!(value: 1) }
 
   context "guest" do

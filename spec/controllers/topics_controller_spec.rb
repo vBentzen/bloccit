@@ -2,7 +2,7 @@ require 'rails_helper'
 include SessionsHelper
 
 RSpec.describe TopicsController, type: :controller do
-  let (:my_topic) { Topic.create!(name:  Faker::StarWars.character, description:   Faker::Lorem.paragraph) }
+  let(:my_topic) { create(:topic) }
 
   context "guest" do
     describe "GET index" do
